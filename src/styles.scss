@@ -1,0 +1,100 @@
+/* all prefixes for all brosers */
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+$webPrefixes: ["moz", "webkit", "o", "ms"];
+
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* prevent images from being selected or draggable */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+/* Importing and overwriting Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$primary: #032C42;
+$secondary: #422500;
+$success: #0C628F;
+$info: #279CDB;
+$warning: #8F550B;
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
+
+@import "bootstrap";
+
+/*class to fill whole screen*/
+
+.wholeVHW {
+  height: calc(100vh - 56px) !important;
+  min-height: fit-content + 5rem !important;
+  width: 100vw !important;
+}
+
+/* svg scaling class*/
+@mixin svgScaling($scalingPoint) {
+  @include media-breakpoint-down(sm) {
+    @include prefix(transform, scale($scalingPoint * 0.3), $webPrefixes);
+  }
+  @include media-breakpoint-up(sm) {
+    @include prefix(transform, scale($scalingPoint * 0.4), $webPrefixes);
+  }
+  @include media-breakpoint-up(md) {
+    @include prefix(transform, scale($scalingPoint * 0.45), $webPrefixes);
+  }
+  @include media-breakpoint-up(lg) {
+    @include prefix(transform, scale($scalingPoint * 0.5), $webPrefixes);
+  }
+  @include media-breakpoint-up(xl) {
+    @include prefix(transform, scale($scalingPoint * 0.55), $webPrefixes);
+  }
+  @include media-breakpoint-up(xxl) {
+    @include prefix(transform, scale($scalingPoint * 0.6), $webPrefixes);
+  }
+}
+
+@mixin fontScaling($scalingPoint) {
+  @include media-breakpoint-down(sm) {
+    font-size: $scalingPoint * 1rem !important;
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: $scalingPoint * 1.2rem !important;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $scalingPoint * 1.35rem !important;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: $scalingPoint * 1.55rem !important;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $scalingPoint * 1.65rem !important;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: $scalingPoint * 1.8rem !important;
+  }
+}
