@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowScreenComponent } from 'src/app/components/showScreen/show-screen.component';
+import { MeldewesenTimelineComponent } from './meldewesen-timeline.component';
 
-describe('StartPageComponent', () => {
-  let component: ShowScreenComponent;
-  let fixture: ComponentFixture<ShowScreenComponent>;
+describe('MeldewesenTimelineComponent', () => {
+  let component: MeldewesenTimelineComponent;
+  let fixture: ComponentFixture<MeldewesenTimelineComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowScreenComponent ]
+      declarations: [ MeldewesenTimelineComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowScreenComponent);
+    fixture = TestBed.createComponent(MeldewesenTimelineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

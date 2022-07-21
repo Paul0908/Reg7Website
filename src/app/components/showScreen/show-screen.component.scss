@@ -21,7 +21,7 @@
 }
 
 .svg{
-  @include svgScaling(4);
+  @include svgScalingTransform(4);
 }
 
 .frontText{
@@ -41,10 +41,12 @@
   @include make-col-ready();
   @include media-breakpoint-down(sm) {
     //left: 0 !important;
+    margin-left: 8vw !important;
     @include make-col(11);
   }
   @include media-breakpoint-up(sm) {
    // left: 0 !important;
+    margin-left: 10vw;
     @include make-col(11);
   }
   @include media-breakpoint-up(xl) {
@@ -191,7 +193,7 @@
 
 @keyframes swell {
   0%, 100% {
-    transform: translate3d(0,-25px,0);
+    transform: translate3d(0,-10px,0);
   }
   50% {
     transform: translate3d(0,5px,0);

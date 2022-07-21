@@ -1,39 +1,25 @@
-/* all prefixes for all brosers */
-@mixin prefix($property, $value, $prefixes) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-  #{$property}: $value;
-}
-$webPrefixes: ["moz", "webkit", "o", "ms"];
+@use "sass:math";
 
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-
-/* prevent images from being selected or draggable */
-img {
-  pointer-events: none;
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /* Importing and overwriting Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "~bootstrap-icons/font/bootstrap-icons";
 
 $primary: #032C42;
-$secondary: #422500;
+$secondary: #D1E8E2;
 $success: #0C628F;
 $info: #279CDB;
-$warning: #8F550B;
+$warning: #FFCB9a;
+
+//$primary: #116466;
+//$secondary: #D1E8E2;
+//$success: #2C3531;
+//$info: #FFCB9A;
+//$warning: #D9B08C;
 
 $theme-colors: (
         "primary":    $primary,
@@ -48,21 +34,29 @@ $theme-colors: (
 
 @import "bootstrap";
 
-/*class to fill whole screen*/
+/************************************
+------------------------------------
+MIXINS
+------------------------------------
+************************************/
 
-.wholeVHW {
-  height: calc(100vh - 56px) !important;
-  min-height: fit-content + 5rem !important;
-  width: 100vw !important;
+/* all prefixes for all brosers */
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
 }
+$webPrefixes: ["moz", "webkit", "o", "ms"];
 
-/* svg scaling class*/
-@mixin svgScaling($scalingPoint) {
+
+/* svg scaling mixin*/
+@mixin svgScalingTransform($scalingPoint) {
   @include media-breakpoint-down(sm) {
-    @include prefix(transform, scale($scalingPoint * 0.3), $webPrefixes);
+    @include prefix(transform, scale($scalingPoint * 0.05), $webPrefixes);
   }
   @include media-breakpoint-up(sm) {
-    @include prefix(transform, scale($scalingPoint * 0.4), $webPrefixes);
+    @include prefix(transform, scale($scalingPoint * 0.2), $webPrefixes);
   }
   @include media-breakpoint-up(md) {
     @include prefix(transform, scale($scalingPoint * 0.45), $webPrefixes);
@@ -76,7 +70,42 @@ $theme-colors: (
   @include media-breakpoint-up(xxl) {
     @include prefix(transform, scale($scalingPoint * 0.6), $webPrefixes);
   }
+  @media (min-width: 2000px) {
+    @include prefix(transform, scale($scalingPoint * 0.8), $webPrefixes);
+  }
 }
+
+
+$svg-container-namespace: '.svg-container';
+//Give 'em' 1:1 responsive container by default
+#{$svg-container-namespace} {
+  display: inline-block;
+  position: relative;
+  height: 0;
+  //Default for 1:1 aspect ratio
+  padding: 0 0 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+//Pass in width / height without any length unit specifier (so we don't have to do sill strip unit wackiness!), and
+//this will determine appropraite ratio for padding hack and deliver the conainter code.
+//Ex. if you had W100 and H200 you'll get a `padding-bottom:200%`
+//Preferably, put something like `viewBox="0 0 N N" preserveAspectRatio="xMinYMin meet"` on your SVG root element
+//Dankbar kopiert (und minimal erweitert) von https://unicorn-ui.com/blog/responsive-svg-mixin/ :D
+@mixin svg-responsive ($width, $height, $suffix:"", $sizeInPercentage) {
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  $padding-bottom: percentage((math.div($height,$width)));
+  #{$svg-container-namespace}-#{$suffix} {
+    width: $sizeInPercentage;
+    padding-bottom: $padding-bottom;
+  }
+}
+
 
 @mixin fontScaling($scalingPoint) {
   @include media-breakpoint-down(sm) {
@@ -97,4 +126,43 @@ $theme-colors: (
   @include media-breakpoint-up(xxl) {
     font-size: $scalingPoint * 1.8rem !important;
   }
+  @media (min-width: 2000px) {
+    font-size: $scalingPoint * 2.1rem !important;
+  }
+}
+
+
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* prevent images from being selected or draggable */
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*class to fill whole screen*/
+
+.wholeVHW {
+  height: calc(100vh - 56px) !important;
+  min-height: fit-content + 5rem !important;
+  width: 100vw !important;
+}
+
+
+.basicText {
+  @include fontScaling(1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pageHeading{
+  @include fontScaling(2.5);
+  font-family: 'Open Sans', sans-serif;
 }

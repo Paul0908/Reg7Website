@@ -1,12 +1,27 @@
-<div class="capabilities-frame wholeVHW" style="margin-top: 80px;">
-    <div class="row justify-content-center" >
-        <div class="col-auto">
-            <h1>Qualität und Stabilität für Ihr Meldewesen</h1>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <app-puzzle-circle style="zoom: 0.4; "></app-puzzle-circle>
+<div class="capTitle pageHeading text-center">
+    Unsere Maßnahmen
+</div>
+<div class="capFrame container-fluid">
+    <div class="row g-0 no-gutters">
+        <div class="boxCol" *ngFor="let box of skillBoxes" >
+            <div class="sqaureBox" [ngStyle]="{'background-color': box.color}">
+                <div class="innerBox">
+                    <div style="width: 100%;">
+<!--                        <div class="svg-container-icon" [innerHTML]="box.icon"></div> //TODO:reinkommentieren um alle icons anzuzeigen-->
+                        <div class="svg-container-icon" [innerHTML]="skillBoxes[0].icon"></div>
+                        <p *ngIf="box.fontColor else blackText" class="boxText" [ngStyle]="{'color': box.fontColor}">
+                            {{box.title}}
+                        </p>
+                        <!-- basic Text Template -->
+                        <ng-template #blackText>
+                            <p class="basicText">
+                                {{box.title}}
+                            </p>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+

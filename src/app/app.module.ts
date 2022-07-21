@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -13,7 +13,10 @@ import {PuzzleCircleComponent} from './components/puzzle-circle/puzzle-circle.co
 import { WavesComponent } from './deprecated/waves/waves.component';
 import { CapabilitiesComponent } from './components/capabilities/capabilities.component';
 import { StartPageComponent } from './pages/start-page/start-page.component';
-import { SvgPathDirective } from './directives/svg-path.directive';
+import { AddClassOnHoverDirective } from 'src/app/directives/add-class-on-hover.directive';
+import { RoadmapComponent } from './components/roadmap/roadmap.component';
+import { MeldewesenTimelineComponent } from './components/meldewesen-timeline/meldewesen-timeline.component';
+import {DeviceSizeService} from "src/app/services/device-size.service";
 
 const appRoutes: Routes = [
   { path: '', component:  StartPageComponent},
@@ -29,7 +32,9 @@ const appRoutes: Routes = [
     WavesComponent,
     CapabilitiesComponent,
     StartPageComponent,
-    SvgPathDirective
+    AddClassOnHoverDirective,
+    RoadmapComponent,
+    MeldewesenTimelineComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +43,15 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    DeviceSizeService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (dss: DeviceSizeService) => () => dss.initService(),
+      deps: [DeviceSizeService],
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

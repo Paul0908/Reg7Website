@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowScreenComponent } from 'src/app/components/showScreen/show-screen.component';
+import { RoadmapComponent } from 'src/app/components/roadmap/roadmap.component';
 
-describe('StartPageComponent', () => {
-  let component: ShowScreenComponent;
-  let fixture: ComponentFixture<ShowScreenComponent>;
+describe('RoadmapComponent', () => {
+  let component: RoadmapComponent;
+  let fixture: ComponentFixture<RoadmapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowScreenComponent ]
+      declarations: [ RoadmapComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShowScreenComponent);
+    fixture = TestBed.createComponent(RoadmapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

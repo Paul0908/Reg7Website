@@ -1,13 +1,6 @@
 import {AfterViewInit, Component, Directive, ElementRef, Input, OnInit, QueryList, ViewChildren} from '@angular/core';
 
 
-/*@Directive({selector: 'path'})
-export class SVGPath {
-  @Input() id!: string;
-}
-
- */
-
 @Component({
   selector: 'app-puzzle-circle',
   templateUrl: './puzzle-circle.component.svg',

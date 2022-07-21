@@ -1,4 +1,4 @@
-<nav #navbar class="navbar navbar-expand-lg navbar-dark bg-info" [class.fixed-top]="downScrolling"  [class.bg-info]="downScrolling" [class.bg-primary]="!downScrolling">
+<nav #navbar class="navbar navbar-expand-lg navbar-dark" [class.fixed-top]="downScrolling"  [class.bg-info]="downScrolling"  [class.bg-primary]="!downScrolling">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="https://reg7.de/wp-content/uploads/2019/02/reg7-meldewesen-logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -17,13 +17,10 @@
                     <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Über uns</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Rollout</a>
+                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Projekte</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Lösungen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Unser Team</a>
+                    <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Das Team</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="'.'" (click)="isMenuCollapsed = true">Kontakt</a>
