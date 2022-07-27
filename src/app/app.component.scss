@@ -1,8 +1,0 @@
-@import 'src/styles';
-
-.fixed-top {
-  top: -40px;
-  transform: translateY(40px);
-  @include prefix(transition, transform .5s ease-out, $webPrefixes);
-}
-

@@ -1,0 +1,52 @@
+@import '../../../scss/styles';
+
+.img-header{
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding-top: 400px;
+  background-blend-mode: darken;
+  @include media-breakpoint-down(md) {
+    padding-top: calc(100vh - 56px);
+    max-height: 250vmin;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 50vh;
+    max-height: 50vmin;
+  }
+  width: 100%;
+  img {
+    filter: brightness(2%);
+  }
+}
+
+.img-header-wrapper {
+  @include media-breakpoint-down(md) {
+    //height: calc(100vh - 100px) !important;
+    //min-height: fit-content + 5rem !important;
+  }
+}
+
+.img-header-title-wrapper{
+  position: absolute;
+  color: #FFFFFF ;
+  text-align: center !important;
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    top: 55%;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 25vh;
+
+  }
+}
+.img-header-title {
+  text-shadow: rgba(0, 0, 0, 0.22) 0 3px 8px;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+.img-header-subtitle    {
+  text-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+}
+

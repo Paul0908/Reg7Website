@@ -1,0 +1,33 @@
+@import '../../../../scss/styles';
+@import "../../../../scss/bootstrap-customization";
+
+.mwTimeLineFrame{
+  overflow:hidden;
+}
+.wholeVHW {
+  position: relative;
+  height: calc(100vh - 56px) !important;
+  min-height: fit-content + 5rem !important;
+  width: 100vw !important;
+}
+
+.mwCols{
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mwText{
+  @extend .mwCols;
+  padding-left:2% !important;
+  padding-right:2% !important;
+}
+
+.pic{
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
