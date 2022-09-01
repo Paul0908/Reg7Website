@@ -8,9 +8,9 @@ describe('MeldewesenTimelineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MeldewesenTimelineComponent ]
+      declarations: [MeldewesenTimelineComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

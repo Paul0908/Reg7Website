@@ -1,33 +1,17 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class DeviceSizeService {
+export default class DeviceSizeService {
 
-  constructor() { }
+  // https://www.npmjs.com/package/ngx-device-detector
 
-
-
-//https://www.npmjs.com/package/ngx-device-detector
-
-
-
-
-
-
-
-
-
-  initService() : Promise<Boolean>
-  {
-    return new Promise<Boolean>((resolve)=>{
+  initService() : Promise<Boolean> {
+    return new Promise<Boolean>((resolve) => {
       setTimeout(() => {
-        console.log("Service is running");
         resolve(true);
       }, 5000);
     });
   }
-
-
 }

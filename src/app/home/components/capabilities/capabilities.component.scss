@@ -3,12 +3,7 @@
 @include svg-responsive(0.5, 0, icon, 40%);
 
 //svg { margin: NumberPX } verändert die svg größe
-.svg-container-icon {
-  margin: 0 auto;
-  svg {
-    margin: 0 auto;
-  }
-}
+
 
 .capTitle{
   padding-left: 0 !important;

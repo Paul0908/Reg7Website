@@ -60,35 +60,29 @@
 }
 
 .regrep{
+  @extend .bigAssHeading;
   @include make-col-ready();
   color: #FFFFFF;
-  font-family: "Bebas Neue", serif;
   text-transform: capitalize;
 
   @include media-breakpoint-down(md) {
     display: none;
   }
-  @include media-breakpoint-up(l) {
+  @include media-breakpoint-up(lg) {
     @include make-col-auto();
     margin-top: 2rem;
-    p {
-      font-size: 3rem;
-    }
+
   }
   @include media-breakpoint-up(xl) {
     @include make-col-auto();
     margin-top: 2.3rem;
     right: -10% !important;
-    p {
-      font-size: 5rem;
-    }
+
   }
   @include media-breakpoint-up(xxl) {
     @include make-col-auto();
     right: -10% !important;
-    p {
-      font-size: 9rem;
-    }
+
   }
 }
 
@@ -96,11 +90,16 @@
   bottom: 0 !important;
   max-height: 1vh;
   overflow: hidden;
+  font-size: 16px;
+  padding-bottom: 10em;
+  position: absolute;
   @include media-breakpoint-down(sm) {
+    padding-bottom: 6em !important;
     zoom: 0.5;
   }
   @include media-breakpoint-up(sm) {
-    zoom: 0.6;
+    padding-bottom: 6em !important;
+    zoom: 0.5;
   }
   @include media-breakpoint-up(md) {
     zoom: 0.7;
@@ -160,6 +159,7 @@
 .wave:nth-of-type(2) {
   animation: wave 60s cubic-bezier( 1, 1, 0.63, 0.76) -.125s infinite, swell 60s ease -2s infinite;
   opacity: 1;
+  /*
   @include media-breakpoint-down(sm) {
     top: -75px;
   }
@@ -178,6 +178,8 @@
   @include media-breakpoint-up(xxl) {
     top: -175px;
   }
+
+   */
 }
 
 @keyframes wave {

@@ -8,9 +8,9 @@ describe('SubPageImgHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubPageImgHeaderComponent ]
+      declarations: [SubPageImgHeaderComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

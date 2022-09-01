@@ -1,8 +1,9 @@
-@import '../../scss/styles';
+@import '../scss/styles';
 
 .fixed-top {
   top: -40px;
   transform: translateY(40px);
+  opacity: 0.95;
   @include prefix(transition, transform .5s ease-out, $webPrefixes);
 }
 
@@ -11,6 +12,15 @@
   @include fontScaling(0.8);
 }
 
+.shift-logo{
+  @include media-breakpoint-down(lg){
+    padding-left: 1rem !important;
+  }
+}
+
+.nav-item {
+  margin-left: 1em;
+}
 .navLogo{
   margin: 0 !important;
   margin-bottom: -1rem !important;

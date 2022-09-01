@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PuzzleCircleComponent } from 'src/app/home/components/puzzle-circle/puzzle-circle.component';
+import PuzzleCircleComponent from 'src/app/home/components/puzzle-circle/puzzle-circle.component';
 
 describe('PuzzleCircleComponent', () => {
   let component: PuzzleCircleComponent;
@@ -8,9 +8,9 @@ describe('PuzzleCircleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PuzzleCircleComponent ]
+      declarations: [PuzzleCircleComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

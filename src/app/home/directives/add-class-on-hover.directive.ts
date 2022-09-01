@@ -1,12 +1,14 @@
-import {Directive, ElementRef, HostListener, Input} from '@angular/core';
+import {
+  Directive, ElementRef, HostListener, Input,
+} from '@angular/core';
 
 /**
  * input is the class name which should be added on hover
  */
 @Directive({
-  selector: '[class-on-hover]'
+  selector: '[class-on-hover]',
 })
-export class AddClassOnHoverDirective {
+export default class AddClassOnHoverDirective {
   @Input('class-on-hover') firstClass!: string;
 
   nativePath: any;
@@ -26,5 +28,4 @@ export class AddClassOnHoverDirective {
   onMouseLeave() {
     this.nativePath.classList.remove(this.firstClass);
   }
-
 }

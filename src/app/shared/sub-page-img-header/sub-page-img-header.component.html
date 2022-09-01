@@ -1,7 +1,9 @@
 <div class="img-header-wrapper">
-    <div class="img-header-title-wrapper">
-        <p class="bigAssHeading img-header-title">{{title}}</p>
-        <p class="subHeading img-header-subtitle">{{subTitle}}</p>
+    <div class="img-header-title-wrapper row">
+        <div class="wholeCol">
+            <p class="bigAssHeading headingShadow">{{title}}</p>
+            <p class="subHeading headingShadow">{{subTitle}}</p>
+        </div>
     </div>
     <div class="img-header" [ngStyle]="{ 'background-image': 'url(' + image + ')'}">>
     </div>

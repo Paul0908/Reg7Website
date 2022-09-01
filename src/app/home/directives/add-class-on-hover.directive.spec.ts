@@ -1,9 +1,9 @@
-import { AddClassOnHoverDirective } from 'src/app/home/directives/add-class-on-hover.directive';
-import {ElementRef} from "@angular/core";
+import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover.directive';
+import { ElementRef } from '@angular/core';
 
 describe('SvgPathDirective', () => {
   it('should create an instance', () => {
-    let path = new ElementRef('path');
+    const path = new ElementRef('path');
     const directive = new AddClassOnHoverDirective(path);
     expect(directive).toBeTruthy();
   });

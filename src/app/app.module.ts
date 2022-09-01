@@ -1,11 +1,11 @@
 /**----------------------------------
  * ANGULAR MODULES
  -----------------------------------*/
-import {APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {RouterModule, Routes} from "@angular/router";
-import {FormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 /**----------------------------------
  * EXTERNAL MODULES
  -----------------------------------*/
@@ -15,17 +15,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /**----------------------------------
  * OWN MODULES
  -----------------------------------*/
-import {ProjectsModule} from "src/app/projects/projects-page/projects.module";
 
 /**----------------------------------
  * COMPONENTS
  -----------------------------------*/
-import { AppComponent } from 'src/app/main-app/app.component';
+import { AppComponent } from 'src/app/app.component';
 import { ShowScreenComponent } from 'src/app/home/components/showScreen/show-screen.component';
-import { PuzzleCircleComponent } from 'src/app/home/components/puzzle-circle/puzzle-circle.component';
+import PuzzleCircleComponent from 'src/app/home/components/puzzle-circle/puzzle-circle.component';
 import { StartPageComponent } from 'src/app/home/start-page/start-page.component';
 import { RoadmapComponent } from 'src/app/home/components/roadmap/roadmap.component';
-
+import { NewShowScreenComponent } from './home/components/new-show-screen/new-show-screen.component';
+import { ZoomBoxComponent } from './home/components/zoom-box/zoom-box.component';
+import { MeasuresComponent } from './home/components/measures/measures.component';
+import { IconTextBoxComponent } from './home/components/icon-text-box/icon-text-box.component';
 
 /**----------------------------------
  * SERVICES
@@ -33,21 +35,26 @@ import { RoadmapComponent } from 'src/app/home/components/roadmap/roadmap.compon
 // import {DeviceSizeService} from "src/app/shared/services/device-size.service";
 // import {ScrollDetectionService} from "src/app/shared/services/scroll-detection.service";
 
-
 /**----------------------------------
  * DIRECTIVES
  -----------------------------------*/
-import { AddClassOnHoverDirective } from 'src/app/home/directives/add-class-on-hover.directive';
-import { AddActiveClassDirective } from 'src/app/main-app/directives/add-active-class.directive';
+import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover.directive';
+import { AddActiveClassDirective } from 'src/app/app-additions/directives/add-active-class.directive';
 
 
 /**
  * Definierung aller Routen für das Router Outlet
  */
 const appRoutes: Routes = [
-  { path: '', component:  StartPageComponent},
-  { path: 'projekte',
-    loadChildren: () => import('src/app/projects/projects-page/projects.module').then(m => m.ProjectsModule)      }
+  { path: '', component: StartPageComponent },
+  {
+    path: 'projekte',
+    loadChildren: () => import('src/app/projects/projects-page/projects.module').then((m) => m.ProjectsModule),
+  },
+  {
+    path: 'team',
+    loadChildren: () => import('src/app/team/team-page/team-page.module').then((m) => m.TeamPageModule)
+  }
 ];
 
 /**
@@ -56,19 +63,20 @@ const appRoutes: Routes = [
 const lazyConfig = [
   {
     selector: 'lazy-capabilities',
-    loadChildren: () =>
-        import('src/app/home/component-modules/capabilities.module').then(m => m.CapabilitiesModule)
+    loadChildren: () => import('src/app/home/component-modules/capabilities.module').then((m) => m.CapabilitiesModule),
   },
   {
     selector: 'lazy-mw-timeline',
-    loadChildren: () =>
-        import('src/app/home/component-modules/mw-timeline.module').then(m => m.MwTimelineModule)
+    loadChildren: () => import('src/app/home/component-modules/mw-timeline.module').then((m) => m.MwTimelineModule),
   },
 ];
-//TODO: app shell und angular universal für schnellere ladezeiten:
-//https://blog.angular-university.io/angular-app-shell/
+// TODO: app shell und angular universal für schnellere ladezeiten:
+// https://blog.angular-university.io/angular-app-shell/
 
-//TODO: remove all unused components
+// TODO: SEO
+// https://www.youtube.com/watch?v=ANyOZIcGvB8
+
+// TODO: remove all unused components
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +85,11 @@ const lazyConfig = [
     StartPageComponent,
     AddClassOnHoverDirective,
     RoadmapComponent,
-    AddActiveClassDirective
+    AddActiveClassDirective,
+    NewShowScreenComponent,
+    ZoomBoxComponent,
+    MeasuresComponent,
+    IconTextBoxComponent,
   ],
   imports: [
     CommonModule,
@@ -88,7 +100,7 @@ const lazyConfig = [
     FormsModule,
   ],
   exports: [
-      RouterModule
+    RouterModule,
   ],
   providers: [
     // ScrollDetectionService,
@@ -100,6 +112,6 @@ const lazyConfig = [
     // },
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

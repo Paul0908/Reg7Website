@@ -8,9 +8,9 @@ describe('CapabilitiesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CapabilitiesComponent ]
+      declarations: [CapabilitiesComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

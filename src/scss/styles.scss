@@ -160,6 +160,12 @@ img {
   width: 100vw !important;
 }
 
+.wholeCol{
+  @include make-col-ready(0);
+  @include make-col-offset(1);
+  @include make-col(10);
+}
+
 /*TEXT STYLING*/
 
 .basicText {
@@ -175,8 +181,17 @@ img {
   margin-top: 0.1em;
 }
 
+.headingShadow{
+  text-shadow: rgba(0, 0, 0, 0.22) 0 3px 8px;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
 .pageHeading{
   @include fontScaling(2.5);
+  padding-bottom: 1em;
+  padding-top: 1em;
+  color: $primary;
   font-family: 'Rubik', sans-serif;
   line-height: 0.8;
   margin-bottom: 0.1em;
@@ -191,3 +206,33 @@ img {
   @include fontScaling(1.5);
   font-family: 'Open Sans', sans-serif;
 }
+
+/** for svg 0 margin **/
+.svg-container-icon {
+  margin: 0 auto;
+  svg {
+    margin: 0 auto;
+  }
+}
+
+
+///** black and white img to color on hover **/
+//.bwToColorOnHover{
+//  filter: grayscale(100%);
+//  -webkit-filter: grayscale(100%);
+//}
+//
+//.bwToColorOnHover:hover{
+//  filter: none;
+//  -webkit-filter: grayscale(0);
+//}
+//img {
+//  filter: grayscale(100%);
+//  -webkit-filter: grayscale(100%);
+//}
+//
+//img:hover {
+//  filter: none;
+//  -webkit-filter: grayscale(0);
+//}
+//
