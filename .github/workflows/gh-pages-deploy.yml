@@ -40,9 +40,6 @@ jobs:
       - name: Build for gh pages
         run: |
           npm run-script deploy
-      - name: Lint
-        run: |
-          npm run lint
       - name: deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@releases/v3                             
         with:  
