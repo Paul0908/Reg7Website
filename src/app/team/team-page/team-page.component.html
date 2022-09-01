@@ -1,0 +1,17 @@
+<app-sub-page-img-header
+        [title]="'Lerne uns kennen'"
+        [subTitle]="'Wir sind ein super klasse tolles Team. Wir bekommen alles hin so super geil sind wir'"
+        [image]="'https://reg7.de/wp-content/uploads/2022/05/reg7-team-head-w6.png'">
+</app-sub-page-img-header>
+<div class="row pageHeadingMarginTop">
+    <div class="wholeCol">
+        <p class="pageHeading">Das Team von Reg7</p>
+    </div>
+</div>
+<div class="row justify-content-start">
+    <div class="wholeCol row">
+        <div class="team-cols" *ngFor="let member of team">
+            <app-member-card [member]="member"></app-member-card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+@import '../../../scss/styles';
+
+.team-cols {
+  @include make-col-ready(0);
+  @include media-breakpoint-down(lg){
+    @include make-col(4);
+  }
+  @include media-breakpoint-up(lg){
+    @include make-col(3);
+  }
+}
+
+.gray-image{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

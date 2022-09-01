@@ -1,0 +1,44 @@
+<!--NAVBAR -->
+<!--falls Nav Bar Farbe geändert-->
+<nav #navbar id="navbar" class="navbar navbar-expand-lg bg-primary navbar-dark " style="width: 100vw"
+     [class.fixed-top]="downScrolling">
+    <!-- class="row"-->
+    <!--[class.bg-info]="downScrolling"  [class.bg-primary]="!downScrolling"-->
+    <!--<div [ngClass]="{'wholeCol': !isMenuCollapsed}">-->
+    <div class="container-fluid">
+        <a class="navbar-brand shift-logo" [routerLink]="'.'">
+            <img src="../assets/svg/logo/reg7LogoOhneSchriftzug.svg" alt="Reg7 Logo"
+                 class="d-inline-block navLogo align-text-top">
+        </a>
+
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler" style="margin-right: 1em" type="button"
+                (click)="isMenuCollapsed = !isMenuCollapsed">
+            &#9776;
+        </button>
+
+        <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto stopContentShifting" add-active>
+                <li #start id="start" class="nav-item">
+                    <!-- Step 4: Close the menu when a link is clicked. -->
+                    <a class="nav-link navBarText" [routerLink]="'.'" (click)="isMenuCollapsed = true">Über uns</a>
+                </li>
+                <li #projects id="projects" class="nav-item">
+                    <a class="nav-link navBarText" [routerLink]="'./projekte'" (click)="isMenuCollapsed = true">Unsere
+                        Projekte</a>
+                </li>
+                <li #team id="team" class="nav-item">
+                    <a class="nav-link navBarText" [routerLink]="'./team'" (click)="isMenuCollapsed = true">Das Team</a>
+                </li>
+                <li #contact id="contact" class="nav-item">
+                    <a class="nav-link navBarText" [routerLink]="'.'" (click)="isMenuCollapsed = true">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+<!--    </div>-->
+</nav>
+
+
+<router-outlet></router-outlet>

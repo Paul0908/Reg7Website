@@ -1,0 +1,20 @@
+<!-- USED TO ORGANIZE FRONT ONE PAGER -->
+
+<app-new-show-screen></app-new-show-screen>
+<ng-container *ngIf="lockedUpLazyChildren[0] === false">
+    <lazy-mw-timeline class="fade-in" *ngxLazyEl></lazy-mw-timeline>
+</ng-container>
+<ng-container *ngIf="lockedUpLazyChildren[1] === false">
+    <lazy-capabilities class="fade-in" *ngxLazyEl></lazy-capabilities>
+</ng-container>
+<ng-container *ngIf="lockedUpLazyChildren[2] === false">
+    <!--
+    //TODO: make the puzzle lazy
+    -->
+<!--    <div class="outer-wrapper-puzzleCircle">-->
+<!--        <div class="wrapper-puzzleCircle">-->
+<!--            <app-puzzle-circle></app-puzzle-circle>-->
+<!--        </div>-->
+<!--    </div>-->
+    <app-measures></app-measures>
+</ng-container>
