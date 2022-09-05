@@ -6,6 +6,7 @@ import {TeamMember} from "src/app/team/interfaces/team-member";
   templateUrl: './team-page.component.html',
   styleUrls: ['./team-page.component.scss']
 })
+//TODO: text pushen und seitlich anzeigen
 export class TeamPageComponent implements OnInit {
   team: TeamMember[] = [{
     imagePathRef: './assets/img/teamMemberPictures/MAckermann.jpg',

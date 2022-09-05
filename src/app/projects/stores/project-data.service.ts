@@ -23,7 +23,7 @@ export class ProjectDataService {
     })
     for (let i = 1; i <= 5; i++) {
       // @ts-ignore
-      this.projects.set(i.toString(), this.projects.get('AbacusDaVinci'));
+      this.projects.set('Abacus' + i.toString(), this.projects.get('AbacusDaVinci'));
 
     }
   }

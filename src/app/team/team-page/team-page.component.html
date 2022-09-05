@@ -10,7 +10,7 @@
 </div>
 <div class="row justify-content-start">
     <div class="wholeCol row">
-        <div class="team-cols" *ngFor="let member of team">
+        <div *ngFor="let member of team; let memberIndex=index;" class="team-cols">
             <app-member-card [member]="member"></app-member-card>
         </div>
     </div>
