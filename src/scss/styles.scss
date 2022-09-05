@@ -1,7 +1,5 @@
 @use "sass:math";
 
-@import "animations"; //all animations are stored here
-
 /* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); //OPEN SANS REGULAR
 //@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap'); //RUBIK REGULAR
@@ -173,7 +171,25 @@ img {
   font-family: 'Open Sans', sans-serif;
 }
 
-.bigAssHeading{
+.paragraph {
+  @include media-breakpoint-down(sm) {
+    font-size: 1rem !important;
+  }
+  @include media-breakpoint-up(sm) {
+    font-size: 1rem !important;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.2rem !important;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 1.4rem !important;
+  }
+  @media (min-width: 2000px) {
+    font-size: 1.8rem !important;
+  }
+}
+
+.bigAssHeading {
   @include fontScaling(3.2);
   font-family: 'Rubik', sans-serif;
   line-height: 0.8;
@@ -181,7 +197,7 @@ img {
   margin-top: 0.1em;
 }
 
-.headingShadow{
+.headingShadow {
   text-shadow: rgba(0, 0, 0, 0.22) 0 3px 8px;
   //white-space: nowrap;
   overflow-wrap: break-word;

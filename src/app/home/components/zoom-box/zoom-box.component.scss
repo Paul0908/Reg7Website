@@ -1,3 +1,4 @@
+@import './src/scss/styles';
 //html {
 //  display: -webkit-box;
 //  display: -ms-flexbox;
@@ -150,7 +151,7 @@
 }
 
 .zoom-box::after {
-  @extend .basicText !optional;
+  @extend .paragraph;
   content: attr(data-content);
   position: absolute;
   opacity: 0;

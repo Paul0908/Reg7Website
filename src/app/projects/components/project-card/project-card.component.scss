@@ -1,2 +1,22 @@
 @import '../../../../scss/styles';
 
+.limit-card-text {
+  min-height: 3rem;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  //border: 2px solid rgba(255,255,255,0.2);
+  color: #FFFFFF;
+  box-shadow: rgba(17, 17, 26, 0.15) 0 4px 16px, rgba(17, 17, 26, 0.1) 0 8px 32px;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  margin-bottom: 0 !important;
+}

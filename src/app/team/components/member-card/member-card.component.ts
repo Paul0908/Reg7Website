@@ -17,4 +17,7 @@ export class MemberCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //TODO: implement show more/less button
+  checkIfClamped() {
+  }
 }

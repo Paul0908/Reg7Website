@@ -1,11 +1,14 @@
-<div class="card" (mouseenter) ="cardWasClicked = true"  (mouseleave) ="cardWasClicked = false"> <!--//TODO: make the card flip oder sowas -->
-    <img class="card-img-top bwToColorOnHover"
-         [src]="member.imagePathRef"
-         alt="Card image cap" [ngClass]="{'gray-image': cardWasClicked}">
-    <div *ngIf="!cardWasClicked; else unclickedCard" class="card-body card-constant-height">
-        <h5 class="card-title">{{member.name}}</h5>
-        <p class="card-text">{{member.job}}</p>
-    </div>
+<div (click)="cardWasClicked = true" (mouseenter)="cardWasClicked = true" (mouseleave)="cardWasClicked = false"
+     (scroll)="checkIfClamped()" class="card">
+    <a [tabindex]="0" class="gray-image" role="button"><!--//TODO: make the card flip oder sowas -->
+        <img [src]="member.imagePathRef"
+             alt="Card image cap"
+             class="card-img-top team-avatar-size" lazyImg>
+        <div class="card-body card-constant-height">
+            <h5 class="card-title">{{member.name}}</h5>
+            <p *ngIf="!cardWasClicked; else unclickedCard" class="card-text">{{member.job}}</p>
+        </div>
+    </a>
 </div>
 
 <ng-template #unclickedCard>

@@ -1,3 +1,73 @@
+@import "src/scss/styles";
+
 .card-constant-height {
-  height: 10em;
+  min-height: 8em;
+  max-height: fit-content;
+}
+
+.card-title {
+  @extend .basicText;
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+  font-size: 1.1rem;
+  @include media-breakpoint-up(xl) {
+    font-weight: bold;
+    font-size: 1.65rem !important;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-weight: bold;
+    font-size: 1.8rem !important;
+  }
+  @media (min-width: 2000px) {
+    font-weight: bold;
+    font-size: 2.1rem !important;
+  }
+}
+
+.card-text {
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  /* truncate to 2 lines //TODO: line-clamp reinkommentieren */
+  //-webkit-line-clamp: 2;
+  @extend .paragraph;
+}
+
+.gray-image {
+  text-align: center !important;
+  filter: grayscale(100%) !important;
+  -webkit-filter: grayscale(100%) !important;
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.gray-image:hover, gray-image:focus, .gray-image:active {
+  color: #000000;
+  filter: grayscale(0%) !important;
+  -webkit-filter: grayscale(0%) !important;
+}
+
+.team-avatar-size {
+  overflow: hidden;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  @include media-breakpoint-up(xl) {
+    height: 33rem;
+  }
+  @include media-breakpoint-down(l) {
+    height: 26rem;
+  }
+  @include media-breakpoint-down(md) {
+    height: 20rem;
+  }
+
+
 }

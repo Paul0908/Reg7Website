@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Measure} from "src/app/home/interfaces/measure";
 import {DomSanitizer} from "@angular/platform-browser";
 
@@ -45,15 +45,21 @@ export class MeasuresComponent {
             '</g>\n' +
             '<g>\n' +
             '</g>\n' +
-            '</svg>', title: 'Rollout', text: 'Kubernetes zur Bereitstellung uns Skalierung von Abacus'},
-      {svgGraphic: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30%" height="30%" id="Fachtest" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">\n' +
+            '</svg>', title: 'Rollout', text: 'Kubernetes zur Bereitstellung & Skalierung von Abacus'
+      },
+      {
+        svgGraphic: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30%" height="30%" id="Fachtest" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">\n' +
             '<style type="text/css">\n' +
             '\t.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}\n' +
             '</style>\n' +
             '<path class="st0" d="M18,8c0-0.6,0.4-1,1-1h0c0.6,0,1-0.4,1-1V4c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h0  c0.6,0,1,0.4,1,1v4.7c0,0.8-0.3,1.7-0.8,2.4l-6.9,9.4C6.1,24.8,6,25.2,6,25.7V27c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-1.3  c0-0.4-0.1-0.8-0.4-1.2l-6.9-9.4c-0.5-0.7-0.8-1.5-0.8-2.4V8"/>\n' +
             '<line class="st0" x1="8" y1="23" x2="24" y2="23"/>\n' +
-            '</svg>', title: 'Fachtest', text: 'Effizientes Testen durch kurze Testprozesse, Testdatenportfolio, Monitoring und Abweichungen'},
-      {svgGraphic: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="30%" width="30%" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">\n' +
+            '</svg>',
+        title: 'Fachtest',
+        text: 'Effizientes Testen durch kurze Testprozesse, Testdatenportfolio, Monitoring & Abweichungen'
+      },
+      {
+        svgGraphic: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="30%" width="30%" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve">\n' +
             '<g>\n' +
             '\t<path d="M245,314.021c-5.936,0-10.743,4.813-10.743,10.749s4.808,10.751,10.743,10.751c5.938,0,10.75-4.815,10.75-10.751   S250.938,314.021,245,314.021z"/>\n' +
             '\t<path d="M480,21.003H10c-5.523,0-10,4.477-10,10v327.456c0,5.522,4.477,10,10,10h174.711l-17.492,42.43h-32.88   c-5.522,0-10,4.478-10,10v38.108c0,5.523,4.478,10,10,10h221.323c5.522,0,10-4.477,10-10v-38.108c0-5.522-4.478-10-10-10h-32.879   l-17.493-42.43H480c5.522,0,10-4.478,10-10V31.003C490,25.479,485.522,21.003,480,21.003z M470,41.003v240.901H20V41.003H470z    M345.662,448.997H144.339v-18.108h201.323V448.997z M301.149,410.889H188.852l17.492-42.43h77.312L301.149,410.889z M20,348.459   v-46.555h450v46.555H20z"/>\n' +

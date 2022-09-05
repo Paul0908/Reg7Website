@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ProjectDataService} from "src/app/projects/stores/project-data.service";
 
 @Component({
   selector: 'app-projects-page',
@@ -6,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  constructor() { }
-
-
+  constructor(public projectData: ProjectDataService) {
+  }
 }

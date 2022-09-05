@@ -1,10 +1,13 @@
 <div class="card">
     <img class="card-img-top"
-         [src]="imgUrl"
+         [src]="project.imgUrl"
          alt="Card image cap">
     <div class="card-body">
-        <h5 class="card-title">{{title}}</h5>
-        <p class="card-text">{{text}}</p>
-        <button type="button" class="btn btn-info" (click)="showMoreClick(arrayId)">Mehr anzeigen</button>
+        <h5 class="card-title">{{project.title}}</h5>
+        <p class="card-text paragraph limit-card-text ">{{project.text}}</p>
+
+        <button (click)="c(projectKey)" [routerLink]="'/projekte/' + projectKey" class="btn btn-info" type="button">Mehr
+            anzeigen
+        </button>
     </div>
 </div>

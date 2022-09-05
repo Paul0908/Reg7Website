@@ -1,22 +1,23 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Project} from "src/app/projects/interfacesAndTypes/project";
 
 @Component({
-  selector: 'app-project-card',
-  templateUrl: './project-card.component.html',
-  styleUrls: ['./project-card.component.scss'],
+    selector: 'app-project-card',
+    templateUrl: './project-card.component.html',
+    styleUrls: ['./project-card.component.scss'],
 })
-export class ProjectCardComponent  {
- @Input() arrayId: number = -1;
+export class ProjectCardComponent {
+    @Input() project: Project = {title: 'Reg7', text: '', imgUrl: ''};
+    @Input() projectKey: number | string | undefined;
 
- @Input() title: string = '';
+    @Output() showMore: EventEmitter<any> = new EventEmitter();
 
- @Input() text: string = '';
+    showMoreClick(id: number | string) {
+        this.showMore.emit(id);
+    }
 
- @Input() imgUrl: string = '';
-
- @Output() showMore: EventEmitter<any> = new EventEmitter();
-
- showMoreClick(id: number){
-   this.showMore.emit(id);
- }
+    c(projectKey: number | string | any) {
+        console.log(projectKey);
+        console.log(this.projectKey);
+    }
 }

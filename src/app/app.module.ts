@@ -1,45 +1,41 @@
 /**----------------------------------
  * ANGULAR MODULES
  -----------------------------------*/
-import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule, Routes} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
 /**----------------------------------
  * EXTERNAL MODULES
  -----------------------------------*/
-import { NgxLazyElModule } from '@juristr/ngx-lazy-el';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgxLazyElModule} from '@juristr/ngx-lazy-el';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 /**----------------------------------
  * OWN MODULES
  -----------------------------------*/
-
 /**----------------------------------
  * COMPONENTS
  -----------------------------------*/
-import { AppComponent } from 'src/app/app.component';
-import { ShowScreenComponent } from 'src/app/home/components/showScreen/show-screen.component';
-import PuzzleCircleComponent from 'src/app/home/components/puzzle-circle/puzzle-circle.component';
-import { StartPageComponent } from 'src/app/home/start-page/start-page.component';
-import { RoadmapComponent } from 'src/app/home/components/roadmap/roadmap.component';
-import { NewShowScreenComponent } from './home/components/new-show-screen/new-show-screen.component';
-import { ZoomBoxComponent } from './home/components/zoom-box/zoom-box.component';
-import { MeasuresComponent } from './home/components/measures/measures.component';
-import { IconTextBoxComponent } from './home/components/icon-text-box/icon-text-box.component';
+import {AppComponent} from 'src/app/app.component';
+import {ShowScreenComponent} from 'src/app/home/components/showScreen/show-screen.component';
+import {StartPageComponent} from 'src/app/home/start-page/start-page.component';
+import {NewShowScreenComponent} from './home/components/new-show-screen/new-show-screen.component';
+import {ZoomBoxComponent} from './home/components/zoom-box/zoom-box.component';
+import {MeasuresComponent} from './home/components/measures/measures.component';
+import {IconTextBoxComponent} from './home/components/icon-text-box/icon-text-box.component';
 
 /**----------------------------------
  * SERVICES
  -----------------------------------*/
 // import {DeviceSizeService} from "src/app/shared/services/device-size.service";
 // import {ScrollDetectionService} from "src/app/shared/services/scroll-detection.service";
-
 /**----------------------------------
  * DIRECTIVES
  -----------------------------------*/
 import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover.directive';
-import { AddActiveClassDirective } from 'src/app/app-additions/directives/add-active-class.directive';
+import {AddActiveClassDirective} from 'src/app/app-additions/directives/add-active-class.directive';
 
 
 /**
@@ -81,10 +77,8 @@ const lazyConfig = [
   declarations: [
     AppComponent,
     ShowScreenComponent,
-    PuzzleCircleComponent,
     StartPageComponent,
     AddClassOnHoverDirective,
-    RoadmapComponent,
     AddActiveClassDirective,
     NewShowScreenComponent,
     ZoomBoxComponent,
