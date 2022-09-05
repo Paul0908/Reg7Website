@@ -2,7 +2,7 @@
     <img class="card-img-top bwToColorOnHover"
          [src]="member.imagePathRef"
          alt="Card image cap" [ngClass]="{'gray-image': cardWasClicked}">
-    <div class="card-body" *ngIf="!cardWasClicked; else unclickedCard">
+    <div *ngIf="!cardWasClicked; else unclickedCard" class="card-body card-constant-height">
         <h5 class="card-title">{{member.name}}</h5>
         <p class="card-text">{{member.job}}</p>
     </div>
