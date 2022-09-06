@@ -1,7 +1,7 @@
 <app-sub-page-img-header
         [title]="'Lerne uns kennen'"
         [subTitle]="'Mit Leidenschaft und Individualkompetenz zum Erfolg'"
-        [image]="'https://reg7.de/wp-content/uploads/2022/05/reg7-team-head-w6.png'">
+        [image]="'./assets/img/teamPictures/reg7-team-head-w6.png'">
 </app-sub-page-img-header>
 <div class="row pageHeadingMarginTop">
     <div class="wholeCol">
@@ -10,7 +10,7 @@
 </div>
 <div class="row justify-content-start">
     <div class="wholeCol row">
-        <div *ngFor="let member of team; let memberIndex=index;" class="team-cols">
+        <div *ngFor="let member of team; let memberIndex=index;" class="team-cols" style="margin-bottom: 5rem">
             <app-member-card [member]="member"></app-member-card>
         </div>
     </div>

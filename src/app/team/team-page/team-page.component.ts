@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {TeamMember} from "src/app/team/interfaces/team-member";
 
 @Component({
@@ -7,7 +7,7 @@ import {TeamMember} from "src/app/team/interfaces/team-member";
   styleUrls: ['./team-page.component.scss']
 })
 //TODO: text pushen und seitlich anzeigen
-export class TeamPageComponent implements OnInit {
+export class TeamPageComponent {
   team: TeamMember[] = [{
     imagePathRef: './assets/img/teamMemberPictures/MAckermann.jpg',
     name: 'Markus Ackermann',
@@ -23,7 +23,7 @@ export class TeamPageComponent implements OnInit {
     {
       imagePathRef: './assets/img/teamMemberPictures/LInU.jpg',
       name: 'Lee In-U',
-      job: 'IT-???',
+      job: 'Hier fehlt wohl noch was',
       description: 'Hier fehlt wohl noch was'
     },
     {
@@ -31,15 +31,43 @@ export class TeamPageComponent implements OnInit {
       name: 'Hubert Jansen',
       job: 'Projektmanagement',
       description: 'Mithilfe des reg7monitors können Sie die Prozesse Ihres Meldewesens optimal automatisieren, überwachen und steuern.'
-    }];
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/LKohaupt.jpg',
+      name: 'Lars Kohaupt',
+      job: 'Hier fehlt wohl noch was',
+      description: 'Hier fehlt wohl noch was'
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/SWeiß.jpg',
+      name: 'Sandra Weiß',
+      job: 'Hier fehlt wohl noch was',
+      description: 'Hier fehlt wohl noch was'
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/SSchüssler.jpg',
+      name: 'Steffen Schüssler',
+      job: 'Hier fehlt wohl noch was',
+      description: 'Hier fehlt wohl noch was'
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/NWegner.jpg',
+      name: 'Nicola Wegner',
+      job: 'Hier fehlt wohl noch was',
+      description: 'Hier fehlt wohl noch was'
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/ARothgerber.jpg',
+      name: 'Alexander Rothgerber',
+      job: 'Hier fehlt wohl noch was',
+      description: 'Hier fehlt wohl noch was'
+    },
+    {
+      imagePathRef: './assets/img/teamMemberPictures/PHiller.jpg',
+      name: 'Paul David Hiller',
+      job: 'Werksstudent',
+      description: 'Student an der THM, für die Webseite und andere Sachen verantwortlich'
+    },];
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-    for (let i = 1; i < 5; i++) {
-      this.team.push(this.team[1]);
-    }
-  }
 
 }
