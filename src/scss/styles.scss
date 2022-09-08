@@ -158,7 +158,25 @@ img {
   width: 100vw !important;
 }
 
-.wholeCol{
+.col-text-display-7-mobile-10 {
+  @include make-col-ready(0);
+  @include make-col-offset(1);
+  @include media-breakpoint-up(md) {
+    @include make-col-offset(1);
+    @include make-col(7);
+  }
+  @include media-breakpoint-down(md) {
+    @include make-col(10);
+  }
+}
+
+.sevenCol {
+  @include make-col-ready(0);
+  @include make-col-offset(1);
+  @include make-col(7);
+}
+
+.wholeCol {
   @include make-col-ready(0);
   @include make-col-offset(1);
   @include make-col(10);

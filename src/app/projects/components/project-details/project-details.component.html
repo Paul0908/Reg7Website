@@ -1,4 +1,19 @@
 <!--<app-sub-page-img-header [title]="project!.title" [image]="project!.imgUrl" [subTitle]="'hey'"></app-sub-page-img-header>-->
-<app-sub-page-img-header [image]="project!.imgUrl" [subTitle]="'construction'"
-                         [title]="'under'"></app-sub-page-img-header>
+<app-sub-page-img-header [image]="project!.imgUrl" [subTitle]="''"
+                         [title]="project!.title"></app-sub-page-img-header>
 
+<div class="row">
+    <div class="wholeCol pageHeadingMarginTop">
+        <h2 class="pageHeading">
+            Das Projekt
+        </h2>
+    </div>
+</div>
+<div class="row" style="padding-bottom: 4rem">
+    <div class="col-text-display-7-mobile-10 paragraph">
+        {{project.text}}
+    </div>
+    <div class="col-3">
+
+    </div>
+</div>

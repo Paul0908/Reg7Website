@@ -36,13 +36,16 @@ import {IconTextBoxComponent} from './home/components/icon-text-box/icon-text-bo
  -----------------------------------*/
 import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover.directive';
 import {AddActiveClassDirective} from 'src/app/app-additions/directives/add-active-class.directive';
+import {ServiesPageComponent} from './services/servies-page/servies-page.component';
+import {LandingScreenComponent} from './home/components/landing-screen/landing-screen.component';
+import {QuoteComponent} from './home/components/quote/quote.component';
 
 
 /**
  * Definierung aller Routen für das Router Outlet
  */
 const appRoutes: Routes = [
-  { path: '', component: StartPageComponent },
+  {path: '', component: StartPageComponent},
   {
     path: 'projekte',
     loadChildren: () => import('src/app/projects/projects-page/projects.module').then((m) => m.ProjectsModule),
@@ -84,6 +87,9 @@ const lazyConfig = [
     ZoomBoxComponent,
     MeasuresComponent,
     IconTextBoxComponent,
+    ServiesPageComponent,
+    LandingScreenComponent,
+    QuoteComponent,
   ],
   imports: [
     CommonModule,

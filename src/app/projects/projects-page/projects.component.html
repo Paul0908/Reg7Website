@@ -9,7 +9,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="project-text-col wholeCol paragraph">
+    <div class="project-text-col col-text-display-7-mobile-10 paragraph">
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
         clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
@@ -21,15 +21,16 @@
 <div class="projectsCardsWrapper justify-content-center row">
     <div class="wholeCol" style="margin: 0 auto; padding-bottom: 4rem; padding-top: 4rem">
         <div class="card-deck">
-            <div *ngFor="let project of projectData.projects | keyvalue | slice:0:2" class="col-6">
+            <div *ngFor="let project of projectData.projects | keyvalue | slice:0:2"
+                 class="mobile-padding-bottom col-12 col-md-6 justify-content-center">
                 <app-project-card [projectKey]="project.key" [project]="project.value"></app-project-card>
             </div>
         </div>
     </div>
     <div class="wholeCol" style="margin: 0 auto;">
         <div class="card-deck">
-            <div *ngFor="let project of projectData.projects | keyvalue | slice: 3" class="col-4">
-                <h2>{{project.key}}</h2>
+            <div *ngFor="let project of projectData.projects | keyvalue | slice: 3"
+                 class="mobile-padding-bottom col-12 col-md-4 justify-content-center">
                 <app-project-card [projectKey]="project.key" [project]="project.value"></app-project-card>
             </div>
             <!--            <div class="card">-->

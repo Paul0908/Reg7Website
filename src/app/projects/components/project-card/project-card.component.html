@@ -1,12 +1,12 @@
 <div class="card">
-    <img class="card-img-top"
+    <img alt="{{project.title}} image"
          [src]="project.imgUrl"
-         alt="Card image cap">
+         class="card-img-top project-card-img-size">
     <div class="card-body">
-        <h5 class="card-title">{{project.title}}</h5>
+        <h5 class="card-title basicText">{{project.title}}</h5>
         <p class="card-text paragraph limit-card-text ">{{project.text}}</p>
-
-        <button (click)="c(projectKey)" [routerLink]="'/projekte/' + projectKey" class="btn btn-info" type="button">Mehr
+        <button (click)="c(projectKey)" [routerLink]="'/projekte/' + projectKey" class="paragraph btn
+         btn-info" style="width: 50%" type="button">Mehr
             anzeigen
         </button>
     </div>

@@ -11,3 +11,16 @@
   background-color: $primary;
 }
 
+.mobile-padding-top {
+  @include media-breakpoint-down(md) {
+    margin-top: 4rem;
+  }
+}
+
+.mobile-padding-bottom {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 4rem;
+  }
+}
+
+

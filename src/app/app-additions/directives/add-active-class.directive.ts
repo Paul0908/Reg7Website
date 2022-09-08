@@ -1,6 +1,6 @@
-import { Directive, ElementRef } from '@angular/core';
-import { Router, RouterEvent } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import {Directive, ElementRef} from '@angular/core';
+import {Router, RouterEvent} from '@angular/router';
+import {filter} from 'rxjs/operators';
 
 @Directive({
   selector: '[add-active]',
@@ -28,14 +28,16 @@ export class AddActiveClassDirective {
     if (this.activeItem !== undefined) {
       this.navItems[this.activeItem].classList.remove('active');
     }
-    if (e.url.length <= 1){
+    if (e.url.length <= 1) {
       this.addActive(0);
-    } else if (currentUrl.includes('projekte')){
+    } else if (currentUrl.includes('projekte')) {
       this.addActive(1);
-    } else if (currentUrl.includes('team')){
+    } else if (currentUrl.includes('leistungen')) {
       this.addActive(2);
-    } else if (currentUrl.includes('kontakt')){
+    } else if (currentUrl.includes('team')) {
       this.addActive(3);
+    } else if (currentUrl.includes('kontakt')) {
+      this.addActive(4);
     }
   }
 

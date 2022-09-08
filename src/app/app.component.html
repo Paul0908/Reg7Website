@@ -28,11 +28,16 @@
                     <a class="nav-link navBarText" [routerLink]="'./projekte'" (click)="isMenuCollapsed = true">Unsere
                         Projekte</a>
                 </li>
+                <li #services class="nav-item" id="services">
+                    <a (click)="isMenuCollapsed = true" [routerLink]="'./leistungen'" class="nav-link navBarText">Unsere
+                        Leistungen</a>
+                </li>
                 <li #team id="team" class="nav-item">
                     <a class="nav-link navBarText" [routerLink]="'./team'" (click)="isMenuCollapsed = true">Das Team</a>
                 </li>
                 <li #contact id="contact" class="nav-item">
-                    <a class="nav-link navBarText" [routerLink]="'.'" (click)="isMenuCollapsed = true">Kontakt</a>
+                    <a (click)="isMenuCollapsed = true" [routerLink]="'./contact'"
+                       class="nav-link navBarText">Kontakt</a>
                 </li>
             </ul>
         </div>

@@ -20,3 +20,24 @@
   padding-right: 0 !important;
   margin-bottom: 0 !important;
 }
+
+.project-card-img-size {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  @include media-breakpoint-down(md) {
+    height: 12rem;
+  }
+  @include media-breakpoint-up(md) {
+    height: 16rem;
+  }
+  @include media-breakpoint-up(l) {
+    height: 17rem;
+  }
+  @include media-breakpoint-up(xl) {
+    height: 20rem;
+  }
+  @include media-breakpoint-up(xxl) {
+    height: 25rem;
+  }
+}
