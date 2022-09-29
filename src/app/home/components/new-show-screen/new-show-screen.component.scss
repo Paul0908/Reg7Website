@@ -1,13 +1,110 @@
 @import '~src/scss/styles';
 
-.showScreenImage{
+.showScreenWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.leftSide {
+  @include media-breakpoint-up(md) {
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 101%; /* If you make it 100%, you get a bit of black showing along the diagonal */
+    height: 100%;
+    background: $success;
+    -webkit-clip-path: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+    clip-path: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+  }
+}
+
+
+.rightSide {
+  display: block;
+  right: 0;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-size: cover;
+  @include prefix('background-image', url('https://images.unsplash.com/photo-1576930343276-902c521c9d2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80'), $webPrefixes);
+  background-image: url('https://images.unsplash.com/photo-1576930343276-902c521c9d2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80');
+  background-color: rgba(grey, 0.6);
+  background-blend-mode: hard-light;
+  height: 100%;
+}
+
+
+.leftSideContent {
+  @include media-breakpoint-up(lg) {
+    padding-top: 25%;
+    position: absolute;
+    margin: 0 auto;
+  }
+}
+
+.rightSideContent {
+
+}
+
+.serviceWrapper {
+  z-index: -20;
+  height: 30%;
+  background-color: transparent;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+#serviceRow {
+  @include media-breakpoint-down(md) {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+  z-index: 0;
+  position: relative;
+  margin-top: -08%;
+}
+
+.serviceCols {
+  z-index: 13;
+  @include make-col-ready(0);
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+  @include media-breakpoint-down(md) {
+    @include make-col(10);
+  }
+}
+
+.serviceCols:nth-child(-n+2) {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 5rem;
+    //TODO: einheitlichen Abstand für so Sachen
+  }
+}
+
+.serviceCols > * {
+  max-width: 10%;
+}
+
+.serviceText {
+
+}
+
+
+.showScreenImage {
   overflow: hidden;
   background-size: cover;
   background-position: center;
   background-image: url('https://images.unsplash.com/photo-1634467599263-af9793758399?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80');
 }
 
-.imageColumn{
+.imageColumn {
   @extend .showScreenImage;
   @include make-col-ready(0);
   @include make-col-offset(4);

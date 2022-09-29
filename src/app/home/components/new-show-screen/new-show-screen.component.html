@@ -1,22 +1,53 @@
-<div class="wholeVHW showScreenWrapper">
-<!--    <div class="row showScreenHeadingRow">-->
-<!--&lt;!&ndash;        <div class="showScreenLogoCol" style="position:absolute">&ndash;&gt;-->
+<!--<div class="wholeVHW">-->
+<!--&lt;!&ndash;    <div class="row showScreenHeadingRow">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        <div class="showScreenLogoCol" style="position:absolute">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="wholeCol bigAssHeading showScreenHeading headingShadow showScreenHeadingCol">&ndash;&gt;-->
+<!--&lt;!&ndash;            Qualität und Stabilität für Ihr Meldewesen&ndash;&gt;-->
 <!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--        <div class="wholeCol bigAssHeading showScreenHeading headingShadow showScreenHeadingCol">-->
-<!--            Qualität und Stabilität für Ihr Meldewesen-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="row">-->
-<!--        <div class="showScreenSubHeadingCol subHeading showScreenSubHeading">-->
-<!--            <p>Wir sind erfahrene Fach- und IT-Experten,-->
-<!--            die sich auf die Automatisierung von Prozessen im Rahmen der Umsetzung regulatorischer Anforderungen spezialisiert haben.</p>-->
-<!--            <button type="button" class="btn btn-primary" style="width: 50%">HEYO</button>-->
-<!--        </div>-->
-<!--    </div>-->
-    <div class="row"></div>
-    <div class="row" style="height: 100vh; position: absolute">
-        <div class="imageColumn">
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="showScreenSubHeadingCol subHeading showScreenSubHeading">&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>Wir sind erfahrene Fach- und IT-Experten,&ndash;&gt;-->
+<!--&lt;!&ndash;            die sich auf die Automatisierung von Prozessen im Rahmen der Umsetzung regulatorischer Anforderungen spezialisiert haben.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <button type="button" class="btn btn-primary" style="width: 50%">HEYO</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row" style="height: 100vh; position: absolute">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="imageColumn">&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--</div>-->
+<div style="z-index: 0">
+    <div class="wholeVHW showScreenWrapper" style="z-index:10">
+        <div class="rightSide">
+            <div class="rightSideContent">
+
+            </div>
+            <div class="leftSide">
+                <div class="leftSideContent">
+                    <h2>REG7</h2>
+                    <h4>Wir machen Meldewesen bezahlbar</h4>
+                </div>
+            </div>
         </div>
     </div>
-
+    <div class="serviceWrapper">
+        <div class="row">
+            <div class="row wholeCol justify-content-between" id="serviceRow" style="z-index: 100;">
+                <div *ngFor="let service of services" [@popOverState]="stateName" class="serviceCols">
+                    <app-icon-text-box [box]="service" style=""></app-icon-text-box>
+                </div>
+            </div>
+        </div>
+        <div class="pageHeadingMarginTop serviceText row" style="">
+            <div class="wholeCol">
+                <p class="subHeading" style="color: #000000">Wir besitzen die Erfahrung, um die Laufzeit Ihrer
+                    Meldewesen-Anwendung sowie den Releasewechsel zu optimieren und Kosten zu begrenzen.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

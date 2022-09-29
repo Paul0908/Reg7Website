@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {SkillBox} from '../../interfaces/skillBox';
 
 @Component({
   selector: 'app-icon-text-box',
@@ -6,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon-text-box.component.scss']
 })
 export class IconTextBoxComponent implements OnInit {
+  @Input() box!: SkillBox;
 
-  constructor() { }
+  styleObject(): Object {
+    if (this.box.borderColor) {
+      return {
+        'border-bottom': '4px solid  ' + this.box.borderColor,
+        'border-right': '4px solid  ' + this.box.borderColor,
+        'background-color': this.box.color
+      }
+    }
+    return {'background-color': this.box.color}
+  }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

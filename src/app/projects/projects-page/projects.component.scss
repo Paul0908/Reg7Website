@@ -11,6 +11,7 @@
   background-color: $primary;
 }
 
+/*
 .mobile-padding-top {
   @include media-breakpoint-down(md) {
     margin-top: 4rem;
@@ -23,4 +24,17 @@
   }
 }
 
+ */
+
+.first-project-card-wrapper:nth-child(1) {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 4rem;
+  }
+}
+
+.second-project-card-wrapper:nth-child(-n+2) {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 4rem;
+  }
+}
 

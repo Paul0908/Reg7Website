@@ -9,13 +9,12 @@
                     <div style="width: 100%;">
 <!--                        <div class="svg-container-icon" [innerHTML]="box.icon"></div> //TODO:reinkommentieren um alle icons anzuzeigen-->
                         <div class="svg-container-icon" [innerHTML]="skillBoxes[0].icon"></div>
-                        <p *ngIf="box.fontColor else blackText" class="boxText" [ngStyle]="{'color': box.fontColor}">
-                            {{box.title}}
+                        <p *ngIf="box.fontColor else blackText" [innerHTML]="box.title"
+                           [ngStyle]="{'color': box.fontColor}" class="boxText">
                         </p>
                         <!-- basic Text Template -->
                         <ng-template #blackText>
-                            <p class="basicText">
-                                {{box.title}}
+                            <p [innerHTML]="box.title" class="basicText">
                             </p>
                         </ng-template>
                     </div>

@@ -6,6 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 /**----------------------------------
  * EXTERNAL MODULES
  -----------------------------------*/
@@ -94,6 +95,7 @@ const lazyConfig = [
   imports: [
     CommonModule,
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule,
     RouterModule.forRoot(appRoutes),
     NgxLazyElModule.forRoot(lazyConfig),

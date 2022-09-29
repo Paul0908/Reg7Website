@@ -1,1 +1,18 @@
-<p>icon-text-box works!</p>
+<div [ngStyle]="styleObject()" class="sqaureBox" style="background-color:white;">
+    <!--{'border-bottom': '1px solid ' + box.color}-->
+    <div class="innerBox">
+        <div id="innerBoxWidthDiv" style="width: 100%;">
+            <!--                        <div class="svg-container-icon" [innerHTML]="box.icon"></div> //TODO:reinkommentieren um alle icons anzuzeigen-->
+            <div [innerHTML]="box.icon" class="svg-container-icon"></div>
+            <ng-container *ngIf="box.fontColor else blackText" [ngStyle]="{'color': box.fontColor}">
+                <div [outerHTML]="box.title"></div>
+            </ng-container>
+            <!-- basic Text Template -->
+            <ng-template #blackText>
+                <ng-container>
+                    <div [outerHTML]="box.title"></div>
+                </ng-container>
+            </ng-template>
+        </div>
+    </div>
+</div>
