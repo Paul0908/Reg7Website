@@ -71,10 +71,10 @@
   width: 45%;
   height: 45%;
   border-radius: 100%;
-  border: 1px solid rgba(225, 227, 232, 0.18);
-  -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  background-color: #fff;
+  border: 1px solid rgba(209, 232, 226, 1);
+  -webkit-box-shadow: 0 3px 4px 0 rgba(209, 232, 226, 0.5);
+  box-shadow: 0 3px 4px 0 rgba(209, 232, 226, 0.5);
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,8 +97,8 @@
 
 .zoom-super-box:hover .zoom-box, .zoom-super-box:focus .zoom-box, .zoom-super-box:active .zoom-box {
   /*   border: 1px solid rgba(225, 227, 232, 0.18); */
-  -webkit-box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
-  box-shadow: 0 3px 4px 0 rgba(44, 71, 146, 0.25);
+  -webkit-box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
+  box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
   -webkit-transition-delay: 0.05s;
   transition-delay: 0.05s;
 }
@@ -153,6 +153,9 @@
 .zoom-box::after {
   @extend .paragraph;
   content: attr(data-content);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #D1E8E2;
   position: absolute;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
