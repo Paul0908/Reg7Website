@@ -1,0 +1,23 @@
+<div class="capFrame container-fluid">
+    <div class="row g-0 no-gutters">
+        <div *ngFor="let box of skillBoxes" class="boxCol">
+            <div [ngStyle]="{'background-color': box.color}" class="sqaureBox">
+                <div class="innerBox">
+                    <div style="width: 100%;">
+                        <!--                        <div class="svg-container-icon" [innerHTML]="box.icon"></div> //TODO:reinkommentieren um alle icons anzuzeigen-->
+                        <div [innerHTML]="skillBoxes[0].icon" class="svg-container-icon"></div>
+                        <p *ngIf="box.fontColor else blackText" [innerHTML]="box.title"
+                           [ngStyle]="{'color': box.fontColor}" class="boxText">
+                        </p>
+                        <!-- basic Text Template -->
+                        <ng-template #blackText>
+                            <p [innerHTML]="box.title" class="basicText">
+                            </p>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

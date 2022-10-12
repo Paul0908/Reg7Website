@@ -108,6 +108,7 @@ const lazyConfig = [
   ],
   exports: [
     RouterModule,
+    MeasuresComponent,
   ],
   providers: [
     // ScrollDetectionService,

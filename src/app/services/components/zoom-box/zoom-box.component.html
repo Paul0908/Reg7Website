@@ -1,0 +1,14 @@
+<div class="zoom-super-box">
+    <div class="zoom-box-container">
+        <div [attr.data-content]="text" class="zoom-box"> <!-- basic Text in box css-->
+            <div class="icon_bg"></div>
+        </div>
+        <div [innerHTML]="svgGraphic" class="icon svg-container-icon">
+        </div>
+    </div>
+    <div class="text">
+        <p class="title basicText">
+            {{title}}
+        </p>
+    </div>
+</div>

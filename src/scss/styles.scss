@@ -185,6 +185,11 @@ img {
   @include make-col(10);
 }
 
+.wholeColWithoutOffset {
+  @include make-col-ready(0);
+  @include make-col(12);
+}
+
 /*TEXT STYLING*/
 
 .basicText {
