@@ -30,9 +30,13 @@ export class AddActiveClassDirective {
     }
     if (e.url.length <= 1) {
       this.addActive(0);
-    } else if (currentUrl.includes('projekte')) {
-      this.addActive(1);
     } else if (currentUrl.includes('leistungen')) {
+      this
+          .addActive(
+              1
+          );
+    } else if (currentUrl.includes('projekte')) {
+
       this.addActive(2);
     } else if (currentUrl.includes('team')) {
       this.addActive(3);

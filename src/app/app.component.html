@@ -24,13 +24,14 @@
                     <!-- Step 4: Close the menu when a link is clicked. -->
                     <a class="nav-link navBarText" [routerLink]="'.'" (click)="isMenuCollapsed = true">Über uns</a>
                 </li>
-                <li #projects id="projects" class="nav-item">
-                    <a class="nav-link navBarText" [routerLink]="'./projekte'" (click)="isMenuCollapsed = true">Unsere
-                        Projekte</a>
-                </li>
                 <li #services class="nav-item" id="services">
                     <a (click)="isMenuCollapsed = true" [routerLink]="'./leistungen'" class="nav-link navBarText">Unsere
                         Leistungen</a>
+                </li>
+                <!--//TODO: tab leuchten anpassen -->
+                <li #projects id="projects" class="nav-item">
+                    <a class="nav-link navBarText" [routerLink]="'./projekte'" (click)="isMenuCollapsed = true">Unsere
+                        Projekte</a>
                 </li>
                 <li #team id="team" class="nav-item">
                     <a class="nav-link navBarText" [routerLink]="'./team'" (click)="isMenuCollapsed = true">Das Team</a>

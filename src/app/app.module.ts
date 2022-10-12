@@ -37,7 +37,6 @@ import {IconTextBoxComponent} from './home/components/icon-text-box/icon-text-bo
  -----------------------------------*/
 import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover.directive';
 import {AddActiveClassDirective} from 'src/app/app-additions/directives/add-active-class.directive';
-import {ServiesPageComponent} from './services/servies-page/servies-page.component';
 import {LandingScreenComponent} from './home/components/landing-screen/landing-screen.component';
 import {QuoteComponent} from './home/components/quote/quote.component';
 
@@ -53,8 +52,15 @@ const appRoutes: Routes = [
   },
   {
     path: 'team',
-    loadChildren: () => import('src/app/team/team-page/team-page.module').then((m) => m.TeamPageModule)
+    loadChildren: () => import('src/app/team/team-page/team-page.module')
+        .then((m) => m.TeamPageModule)
+  },
+  {
+    path: 'leistungen',
+    loadChildren: () => import('src/app/services/services-module/services.module')
+        .then((m) => m.ServicesModule)
   }
+
 ];
 
 /**
@@ -88,7 +94,6 @@ const lazyConfig = [
     ZoomBoxComponent,
     MeasuresComponent,
     IconTextBoxComponent,
-    ServiesPageComponent,
     LandingScreenComponent,
     QuoteComponent,
   ],

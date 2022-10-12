@@ -21,7 +21,6 @@ const lazyConfig = [{}];
     CommonModule,
     NgxLazyElModule.forRoot(lazyConfig),
     SharedModule,
-    SharedModule,
   ],
   exports: [
     RouterModule,
