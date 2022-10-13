@@ -1,5 +1,5 @@
 <!--NAVBAR -->
-<!--falls Nav Bar Farbe geändert-->
+<!--falls Nav Bar Farbe geändert //TODO: DIE ACTIVE FARBE ANPASSEN AN $secondary-->
 <nav #navbar id="navbar" class="navbar navbar-expand-lg bg-primary navbar-dark " style="width: 100vw"
      [class.fixed-top]="downScrolling">
     <!-- class="row"-->
@@ -42,9 +42,36 @@
                 </li>
             </ul>
         </div>
-        </div>
-<!--    </div>-->
+    </div>
+    <!--    </div>-->
 </nav>
 
 
 <router-outlet></router-outlet>
+
+<!--//TODO: footer -->
+<footer class="footer row">
+    <div class="wholeCol row border-between">
+        <div class="footer-col">
+            <img alt="Reg7 Logo" src="assets/svg/logo/reg7LogoOhneSchriftzug.svg" style="width:30%; align-self: start"/>
+            <span><b>Regulatory Reporting</b></span>
+            <span>Hier steht irgendeine coole Info oder so</span>
+        </div>
+        <div class="footer-col">
+            <span><b>Links</b></span>
+            <span>Kontakt</span>
+            <span>Impressum</span>
+            <span>Datenschutz</span>
+        </div>
+        <div class="footer-col">
+            <span><b>reg7 GmbH</b></span>
+            <span>De-Saint-Exupery-Straße 10</span>
+            <span>60549 Frankfurt am Main</span>
+            <span>Deutschland</span>
+            <span>E-Mail: <a href="mailto:info@reg7.de" style="color:inherit">info@reg7.de</a></span>
+        </div>
+    </div>
+    <div class="wholeCol align-text-bottom" style="text-align: center">
+        <span class="paragraph c2022reg7">©2022 reg7 GmbH</span>
+    </div>
+</footer>

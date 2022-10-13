@@ -1,6 +1,11 @@
 @import '../../../scss/styles';
 
-.img-header{
+//TODO: vielleicht $secondary farbe statt weiß
+p {
+  color: #ffffff !important;
+}
+
+.img-header {
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -12,7 +17,8 @@
   }
   @include media-breakpoint-up(md) {
     padding-top: 50vh;
-    max-height: 50vmin;
+    min-height: 60vmin;
+    max-height: 80vmin;
   }
   width: 100%;
   img {

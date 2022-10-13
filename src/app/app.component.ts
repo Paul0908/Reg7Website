@@ -1,7 +1,5 @@
-import {
-  AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, Renderer2, ViewChild,
-} from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import {AfterViewInit, Component, ElementRef, Inject, OnInit, Renderer2, ViewChild,} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
 import ScrollDetectionService from 'src/app/shared/services/scroll-detection.service';
 
 @Component({
@@ -9,16 +7,17 @@ import ScrollDetectionService from 'src/app/shared/services/scroll-detection.ser
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, AfterViewInit{
+export class AppComponent implements OnInit, AfterViewInit {
   public isMenuCollapsed = true;
 
   public downScrolling = false;
 
   private navbarHeight!: number;
 
+
   @ViewChild('navbar') navbar!: ElementRef;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer2, private scrollDetection: ScrollDetectionService){
+  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer2, private scrollDetection: ScrollDetectionService,) {
   }
 
   ngOnInit(){

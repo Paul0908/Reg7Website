@@ -1,5 +1,9 @@
 @import '../scss/styles';
 
+
+/*----------------------------------------------------------------
+NAVBAR
+ -----------------------------------------------------------------*/
 .fixed-top {
   top: -40px;
   transform: translateY(40px);
@@ -7,10 +11,12 @@
   @include prefix(transition, transform .5s ease-out, $webPrefixes);
 }
 
+
 .navBarText {
   @extend .basicText;
   @include fontScaling(0.8);
 }
+
 
 .shift-logo{
   @include media-breakpoint-down(lg){
@@ -21,6 +27,7 @@
 .nav-item {
   margin-left: 1em;
 }
+
 .navLogo{
   margin: 0 !important;
   margin-bottom: -1rem !important;
@@ -43,4 +50,55 @@
   /*----------------------------------------------------------------
   ANIMATION FEHLT IN DIESER LÖSUNG
   ----------------------------------------------------------------*/
+}
+
+
+/*----------------------------------------------------------------
+FOOTER
+ -----------------------------------------------------------------*/
+.footer {
+  height: fit-content;
+  min-height: 10rem;
+  background-color: $primary;
+  color: $secondary;
+  box-shadow: 0px -1px 2px 2px rgba(230, 230, 230, 0.8);
+
+}
+
+.footer-col {
+  @include make-col-ready(0);
+  padding: 1rem 2rem;
+  align-content: center;
+  text-align: center;
+  @include media-breakpoint-up(lg) {
+    @include make-col(4);
+  }
+  @include media-breakpoint-down(lg) {
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+}
+
+.border-between > [class*='footer-col']:before {
+  background: $secondary;
+  content: " ";
+  left: 0;
+  position: absolute;
+  width: 1px;
+  top: .5rem;
+  bottom: .5rem;
+}
+
+.border-between > [class*='footer-col']:first-child:before {
+  display: none;
+}
+
+.footer-col > span {
+  display: block;
+}
+
+
+.c2022reg7 {
+  text-align: center;
+  bottom: 1rem;
 }

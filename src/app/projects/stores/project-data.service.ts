@@ -7,6 +7,7 @@ import {Project} from "src/app/projects/interfacesAndTypes/project";
   providedIn: 'root'
 })
 export class ProjectDataService {
+
   public projects = new Map<string, Project>([['AbacusDaVinci', {
     title: 'Implementierung ABACUS/DaVinci',
     text: 'Aufgrund der Fusion zweier Institute innerhalb eines Konzerns sollte ABACUS/DaVinci als Meldesoftware erstmals implementiert werden. Das aufnehmende Institut war vollumfänglich meldepflichtig und hatte für die Gruppenmeldung des Konzerns Meldungen nach IFRS zu erstellen. Dabei definierte die Aufsicht eine Übergangsphase, in der sie sowohl Einzelmeldungen der ehemaligen Institute als auch eine zusammengefasste Gruppenmeldungen forderte.\n' +
