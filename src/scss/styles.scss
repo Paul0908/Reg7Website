@@ -20,9 +20,21 @@ $success: #0C628F;
 $info: #279CDB;
 $warning: #FFCB9a;
 
+
+//DOES NOT WORK YET /////////////
+//TODO:fix
+$primaryRGBA: 3, 44, 66;
+
+@mixin rgbas($property, $rgba, $opacity) {
+  $property: rgba($rgba, $opacity);
+}
+
+////////////////////////////////
+
 html {
   hyphens: auto;
 }
+
 //$primary: #116466;
 //$secondary: #D1E8E2;
 //$success: #2C3531;
@@ -244,6 +256,7 @@ img {
 .masterHeadingShowScreen:nth-child(1) {
 
 }
+
 
 .pageHeading {
   @include fontScaling(2.5);

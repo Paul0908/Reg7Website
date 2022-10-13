@@ -41,6 +41,7 @@ import AddClassOnHoverDirective from 'src/app/home/directives/add-class-on-hover
 import {AddActiveClassDirective} from 'src/app/app-additions/directives/add-active-class.directive';
 import {LandingScreenComponent} from './home/components/landing-screen/landing-screen.component';
 import {QuoteComponent} from './home/components/quote/quote.component';
+import {HeroComponent} from './home/components/hero/hero.component';
 
 
 /**
@@ -86,29 +87,31 @@ const lazyConfig = [
 
 // TODO: remove all unused components
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShowScreenComponent,
-    StartPageComponent,
-    AddClassOnHoverDirective,
-    AddActiveClassDirective,
-    NewShowScreenComponent,
-    ZoomBoxComponent,
-    MeasuresComponent,
-    IconTextBoxComponent,
-    LandingScreenComponent,
-    QuoteComponent,
-  ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    RouterModule.forRoot(appRoutes),
-    NgxLazyElModule.forRoot(lazyConfig),
-    FormsModule,
-  ],
-  exports: [
+    declarations: [
+        AppComponent,
+        ShowScreenComponent,
+        StartPageComponent,
+        AddClassOnHoverDirective,
+        AddActiveClassDirective,
+        NewShowScreenComponent,
+        ZoomBoxComponent,
+        MeasuresComponent,
+        IconTextBoxComponent,
+        LandingScreenComponent,
+        QuoteComponent,
+        HeroComponent,
+        HeroComponent,
+    ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgbModule,
+        RouterModule.forRoot(appRoutes),
+        NgxLazyElModule.forRoot(lazyConfig),
+        FormsModule,
+    ],
+    exports: [
     RouterModule,
     MeasuresComponent,
   ],

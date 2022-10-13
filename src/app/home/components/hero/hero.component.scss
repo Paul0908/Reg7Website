@@ -1,0 +1,112 @@
+@import '~src/scss/styles';
+
+.showScreenWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  @include prefix('background-image', url('~src/assets/img/frankfurt_sun_skyline-min.jpg'), $webPrefixes);
+  background-image: url('~src/assets/img/frankfurt_sun_skyline-min.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(grey, 0.6);
+  background-blend-mode: hard-light;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  //noinspection CssInvalidPropertyValue
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  image-rendering: optimizeQuality;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}
+
+.hero-box-row {
+  width: 100%;
+  //height: 50%;
+  z-index: 11;
+  position: absolute;
+  //right: 55.7%;
+  //8.3% offset
+  top: 25%;
+  @include media-breakpoint-down(lg) {
+    top: 15%;
+  }
+}
+
+
+.hero-box-col {
+  @include make-col-ready(0);
+  @include media-breakpoint-up(lg) {
+    @include make-col(5.5);
+  }
+  @include media-breakpoint-down(lg) {
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+  height: fit-content;
+  padding: 2rem 1rem;
+  background-color: rgba(3, 44, 66, .4);
+  color: $secondary;
+}
+
+.heroHeading {
+  @include media-breakpoint-down(md) {
+    font-size: 200%;
+  }
+  @include media-breakpoint-down(lg) {
+  }
+  line-height: .95;
+  @include fontScaling(2.3);
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 0.3em;
+}
+
+.heroParagraph {
+  font-size: 1.4rem;
+}
+
+
+/********* 3 Kästchen *******/
+.serviceWrapper {
+  z-index: -20;
+  height: 30%;
+  background-color: transparent;
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+#serviceRow {
+  @include media-breakpoint-down(md) {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+  }
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+  z-index: 0;
+  position: relative;
+  margin-top: -08%;
+}
+
+.serviceCols {
+  z-index: 13;
+  @include make-col-ready(0);
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+  @include media-breakpoint-down(md) {
+    @include make-col(10);
+  }
+}
+
+.serviceCols:nth-child(-n+2) {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 5rem;
+    //TODO: einheitlichen Abstand für so Sachen
+  }
+}
+
+.serviceCols > * {
+  max-width: 10%;
+}

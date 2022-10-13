@@ -1,0 +1,35 @@
+<div style="z-index: 0">
+    <div class="wholeVHW showScreenWrapper" style="z-index:10">
+        <div class="hero-box-row row">
+            <div class="wholeCol row">
+                <div class="hero-box-col">
+                    <p class="heroHeading">Regulatory Reporting</p>
+                    <p class="heroParagraph">
+                        Wir besitzen die Erfahrung, um die Laufzeit Ihrer Meldewesen-Anwendung sowie den Releasewechsel
+                        zu optimieren und Kosten zu begrenzen.
+                    </p>
+                    <button [routerLink]="'./leistungen'" class="btn btn-lg btn-primary" type="button">Erfahre mehr
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="serviceWrapper">
+        <div class="row">
+            <div class="row wholeCol justify-content-between" id="serviceRow" style="z-index: 100;">
+                <div *ngFor="let service of services" [@popOverState]="stateName" class="serviceCols">
+                    <app-icon-text-box [box]="service" style=""></app-icon-text-box>
+                </div>
+            </div>
+        </div>
+        <!--<div class="pageHeadingMarginTop serviceText row" style="">
+            <div class="wholeCol">
+                <p class="subHeading" style="color: #000000">Wir besitzen die Erfahrung, um die Laufzeit Ihrer
+                    Meldewesen-Anwendung sowie den Releasewechsel zu optimieren und Kosten zu begrenzen.
+                </p>
+            </div>
+        </div>-->
+    </div>
+</div>
