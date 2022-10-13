@@ -1,7 +1,7 @@
 /**----------------------------------
  * ANGULAR MODULES
  -----------------------------------*/
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, ErrorHandler, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
@@ -14,8 +14,10 @@ import {NgxLazyElModule} from '@juristr/ngx-lazy-el';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 /**----------------------------------
- * OWN MODULES
+ * OWN MODULES/CLASSES
  -----------------------------------*/
+import {GlobalErrorHandler} from "src/app/chunkErrors/globalErrorHandler";
+
 /**----------------------------------
  * COMPONENTS
  -----------------------------------*/
@@ -110,8 +112,9 @@ const lazyConfig = [
     RouterModule,
     MeasuresComponent,
   ],
-  providers: [
-    // ScrollDetectionService,
+  providers: [{provide: ErrorHandler, useClass: GlobalErrorHandler}
+
+// ScrollDetectionService,
     // {
     //   provide: APP_INITIALIZER,
     //   useFactory: (sds: ScrollDetectionService) => () => sds.initService(),

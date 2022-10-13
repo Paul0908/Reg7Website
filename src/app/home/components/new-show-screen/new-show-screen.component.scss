@@ -39,10 +39,32 @@
 
 .leftSideContent {
   @include media-breakpoint-up(lg) {
-    padding-top: 25%;
+    width: 100%;
+    height: 100%;
+    -webkit-shape-outside: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+    shape-outside: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+    float: left;
+    /* the following three lines are only for demonstration purposes */
+    background: #444;
+    -webkit-clip-path: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+    clip-path: polygon(0 0, 41% 0, 24% 100%, 0% 100%);
+
+    padding: 1% 4% 0;
     position: absolute;
     margin: 0 auto;
   }
+}
+
+br {
+
+}
+
+.leftSideColor {
+  color: $secondary !important;
+  -webkit-transform: skew(30deg);
+  -moz-transform: skew(30deg);
+  transform: skew(30deg);
+
 }
 
 .rightSideContent {
