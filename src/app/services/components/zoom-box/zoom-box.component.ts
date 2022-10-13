@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, HostListener, Input} from '@angular/core';
 import {SafeHtml} from "@angular/platform-browser";
 
 @Component({
@@ -12,5 +12,10 @@ export class ZoomBoxComponent {
   @Input() svgGraphic: SafeHtml = '<svg xmlns="http://www.w3.org/2000/"></svg>';
   @Input() title: string = '';
   @Input() text: string = '';
+
+  @HostListener('document:touchstart')
+  onTouch() {
+    void 0;
+  }
 
 }

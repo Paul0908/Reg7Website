@@ -95,22 +95,28 @@
   position: relative;
 }
 
-.zoom-super-box:hover .zoom-box, .zoom-super-box:focus .zoom-box, .zoom-super-box:active .zoom-box {
-  /*   border: 1px solid rgba(225, 227, 232, 0.18); */
-  -webkit-box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
-  box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
+.zoom-super-box:link, .zoom-super-box:hover, .zoom-super-box:focus, .zoom-super-box:active {
+  & .zoom-box {
+    /*   border: 1px solid rgba(225, 227, 232, 0.18); */
+    -webkit-box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
+    box-shadow: 0 0 10px 1px rgba(209, 232, 226, 0.25);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+  }
 }
 
-.zoom-super-box:hover .icon_bg, .zoom-super-box:focus .icon_bg, .zoom-super-box:active .icon_bg {
-  -webkit-transform: translateY(-32px) scale(6);
-  transform: translateY(-32px) scale(6);
+.zoom-super-box:link, .zoom-super-box:hover, .zoom-super-box:focus, .zoom-super-box:active {
+  & .icon_bg {
+    -webkit-transform: translateY(-32px) scale(6);
+    transform: translateY(-32px) scale(6);
+  }
 }
 
-.zoom-super-box:hover .icon, .zoom-super-box:focus .icon, .zoom-super-box:active .icon {
-  -webkit-transform: translateY(-48px) scale(1.4);
-  transform: translateY(-48px) scale(1.4);
+.zoom-super-box:link, .zoom-super-box:hover, .zoom-super-box:focus, .zoom-super-box:active {
+  & .icon {
+    -webkit-transform: translateY(-48px) scale(1.4);
+    transform: translateY(-48px) scale(1.4);
+  }
 }
 
 .zoom-super-box {
@@ -143,7 +149,7 @@
   transition-delay: 0.32s;
 }
 
-.zoom-super-box:hover, zoom-super-box:focus, .zoom-super-box:active {
+.zoom-super-box:link, .zoom-super-box:hover, zoom-super-box:focus, .zoom-super-box:active {
   & .text {
     opacity: 0;
     -webkit-transform: translateY(-4px) scale(.8);
@@ -166,7 +172,7 @@
   bottom: 15%;
 }
 
-.zoom-super-box:hover, .zoom-super-box:active {
+.zoom-super-box:link, .zoom-super-box:hover, .zoom-super-box:active {
   & .zoom-box::after, .zoom-super-box:focus .zoom-box::after, .zoom-super-box:active .zoom-box::after {
     opacity: 1;
   }
