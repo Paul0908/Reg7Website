@@ -80,17 +80,21 @@ FOOTER
 }
 
 .border-between > [class*='footer-col']:before {
-  background: $secondary;
-  content: " ";
-  left: 0;
-  position: absolute;
-  width: 1px;
-  top: .5rem;
-  bottom: .5rem;
+  @include media-breakpoint-up(lg) {
+    background: $secondary;
+    content: " ";
+    left: 0;
+    position: absolute;
+    width: 1px;
+    top: .5rem;
+    bottom: .5rem;
+  }
 }
 
 .border-between > [class*='footer-col']:first-child:before {
-  display: none;
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
 }
 
 .footer-col > span {

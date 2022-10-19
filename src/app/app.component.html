@@ -37,7 +37,7 @@
                     <a class="nav-link navBarText" [routerLink]="'./team'" (click)="isMenuCollapsed = true">Das Team</a>
                 </li>
                 <li #contact id="contact" class="nav-item">
-                    <a (click)="isMenuCollapsed = true" [routerLink]="'./contact'"
+                    <a (click)="isMenuCollapsed = true" [routerLink]="'./kontakt'"
                        class="nav-link navBarText">Kontakt</a>
                 </li>
             </ul>
@@ -53,15 +53,16 @@
 <footer class="footer row">
     <div class="wholeCol row border-between">
         <div class="footer-col">
-            <img alt="Reg7 Logo" src="assets/svg/logo/reg7LogoOhneSchriftzug.svg" style="width:30%; align-self: start"/>
+            <img [routerLink]="'.'" alt="Reg7 Logo" src="assets/svg/logo/reg7LogoOhneSchriftzug.svg"
+                 style="width:30%; align-self: start"/>
             <span><b>Regulatory Reporting</b></span>
             <span>Hier steht irgendeine coole Info oder so</span>
         </div>
         <div class="footer-col">
             <span><b>Links</b></span>
-            <span>Kontakt</span>
-            <span>Impressum</span>
-            <span>Datenschutz</span>
+            <span [routerLink]="'./kontakt'">Kontakt</span>
+            <span [routerLink]="'./impressum'">Impressum</span>
+            <span [routerLink]="'./datenschutz'">Datenschutz</span>
         </div>
         <div class="footer-col">
             <span><b>reg7 GmbH</b></span>

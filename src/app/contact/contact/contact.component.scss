@@ -1,0 +1,10 @@
+@import '../../../scss/styles';
+
+.rightCol {
+  @include make-col-ready();
+  background-color: $primary;
+  @include media-breakpoint-up(lg) {
+    @include make-col-offset(6);
+    @include make-col(6);
+  }
+}

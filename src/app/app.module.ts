@@ -42,27 +42,42 @@ import {AddActiveClassDirective} from 'src/app/app-additions/directives/add-acti
 import {LandingScreenComponent} from './home/components/landing-screen/landing-screen.component';
 import {QuoteComponent} from './home/components/quote/quote.component';
 import {HeroComponent} from './home/components/hero/hero.component';
+import {ImpressumComponent} from './law_required_pages/impressum/impressum.component';
+import {DatenschutzComponent} from './law_required_pages/datenschutz/datenschutz.component';
 
 
 /**
  * Definierung aller Routen für das Router Outlet
  */
 const appRoutes: Routes = [
-  {path: '', component: StartPageComponent},
-  {
-    path: 'projekte',
-    loadChildren: () => import('src/app/projects/projects-page/projects.module').then((m) => m.ProjectsModule),
-  },
-  {
-    path: 'team',
-    loadChildren: () => import('src/app/team/team-page/team-page.module')
-        .then((m) => m.TeamPageModule)
-  },
-  {
-    path: 'leistungen',
-    loadChildren: () => import('src/app/services/services-module/services.module')
-        .then((m) => m.ServicesModule)
-  }
+    {path: '', component: StartPageComponent},
+    {
+        path: 'projekte',
+        loadChildren: () => import('src/app/projects/projects-page/projects.module').then((m) => m.ProjectsModule),
+    },
+    {
+        path: 'team',
+        loadChildren: () => import('src/app/team/team-page/team-page.module')
+            .then((m) => m.TeamPageModule)
+    },
+    {
+        path: 'leistungen',
+        loadChildren: () => import('src/app/services/services-module/services.module')
+            .then((m) => m.ServicesModule)
+    },
+    {
+        path: 'kontakt',
+        loadChildren: () => import('src/app/contact/contact/contact.module').then((m) => m.ContactModule)
+    },
+    {
+        path: 'impressum',
+        component: ImpressumComponent
+    },
+    {
+        path: 'datenschutz',
+        component: DatenschutzComponent
+    }
+
 
 ];
 
@@ -101,13 +116,15 @@ const lazyConfig = [
         QuoteComponent,
         HeroComponent,
         HeroComponent,
+        ImpressumComponent,
+        DatenschutzComponent
     ],
     imports: [
         CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
         NgbModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
         NgxLazyElModule.forRoot(lazyConfig),
         FormsModule,
     ],
