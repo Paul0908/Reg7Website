@@ -287,6 +287,18 @@ img {
 }
 
 
+///from color to color animation///
+@mixin changeColor ($keyFrameName, $startColor, $endColor) {
+    @keyframes #{$keyFrameName} {
+      0% {
+        background-color: $startColor;
+      }
+      100% {
+        background-color: $endColor;
+      }
+    }
+}
+
 ///** black and white img to color on hover **/
 //.bwToColorOnHover{
 //  filter: grayscale(100%);

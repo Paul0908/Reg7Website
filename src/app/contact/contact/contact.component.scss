@@ -8,3 +8,82 @@
     @include make-col(6);
   }
 }
+
+#wrapper > * {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(6);
+  }
+  @include make-col(12);
+  &:hover {
+    .content > .paragraph {
+      animation: border .8s ease-in-out forwards, fix-margin .8s ease-in-out forwards;
+    }
+  }
+}
+
+
+
+#leftBox {
+  $lboxcolor: $info;
+  background-color: $lboxcolor;
+  &:hover {
+    .content {
+      @include changeColor("lChangeColor", $lboxcolor, rgba($lboxcolor, .9));
+      animation: lChangeColor 0.1s ease-in-out forwards;
+    }
+  }
+}
+
+#rightBox {
+  $rboxcolor: $success;
+  background-color: $rboxcolor;
+  &:hover {
+    @include changeColor("rChangeColor", $rboxcolor, rgba($rboxcolor,.9));
+    animation:rChangeColor 0.1s ease-in-out forwards;
+  }
+}
+
+.content {
+  @include make-col-ready();
+  @include media-breakpoint-up  (lg){
+    @include make-col(8.6);
+    @include make-col-offset(1.9);
+    height: 100%;
+  }
+  > .paragraph {
+    margin-bottom: 2rem;
+  }
+  > * > span {
+    display: block;
+  }
+}
+
+@keyframes border {
+  10% {
+    border-right: 1px solid rgba(255, 255, 255, .2)
+  }
+  40% {
+    border-right: 1px solid rgba(255, 255, 255, .4);
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+  }
+  70% {
+    border-right: 1px solid rgba(255, 255, 255, .6);
+    border-bottom: 1px solid rgba(255, 255, 255, .6);
+    border-left: 1px solid rgba(255, 255, 255, .6);
+  }
+  100% {
+    border: 1px solid rgba(255, 255, 255, .9)
+  }
+}
+
+@keyframes fix-margin {
+  40% {
+    margin-bottom: calc(2rem - 1px);
+  }
+}
+
+
