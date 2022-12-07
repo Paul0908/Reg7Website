@@ -1,0 +1,77 @@
+@import '../../../../scss/styles';
+
+//TODO: vielleicht $secondary farbe statt weiß
+p {
+  color: #ffffff !important;
+}
+
+.img-header {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  padding-top: 400px;
+  background-blend-mode: darken;
+  background-color: $info;
+  @include media-breakpoint-down(md) {
+    padding-top: calc(100vh - 56px);
+    max-height: 250vmin;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 50vh;
+    min-height: 60vmin;
+    max-height: 80vmin;
+  }
+  width: 100%;
+
+}
+
+.map-picture-pointer {
+  position: absolute;
+  width: 5%;
+  margin-top: 31.6%;
+  z-index: 50;
+  left: 55.6%;
+
+}
+
+.map-picture{
+  width: 100%;
+  filter: opacity(40%);
+  // -webkit-mask-image: -webkit-radial-gradient(circ);
+  mask-image: radial-gradient(circle at center, rgba(0,0,0,1),  rgba(0,0,0,.5), rgba(39,156,219,.1), rgba(0,0,0,0));
+  outline: rgba(39,156,219,.3) 4rem solid;
+  outline-offset: -3rem;
+  z-index: 40;
+  position: absolute;
+}
+.img-header-wrapper {
+  @include media-breakpoint-down(md) {
+    //height: calc(100vh - 100px) !important;
+    //min-height: fit-content + 5rem !important;
+  }
+}
+
+.img-header-title-wrapper{
+  position: absolute;
+  color: #FFFFFF ;
+  //text-align: center !important;
+  width: 100%;
+  @include media-breakpoint-down(md) {
+    top: 30%;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 10vh;
+
+  }
+}
+
+.img-header-title {
+  text-shadow: rgba(0, 0, 0, 0.22) 0 3px 8px;
+  //white-space: nowrap;
+  overflow-wrap: break-word;
+}
+
+.img-header-subtitle    {
+  text-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+}
+

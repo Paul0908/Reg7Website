@@ -117,7 +117,7 @@ const lazyConfig = [
         HeroComponent,
         HeroComponent,
         ImpressumComponent,
-        DatenschutzComponent
+        DatenschutzComponent,
     ],
     imports: [
         CommonModule,

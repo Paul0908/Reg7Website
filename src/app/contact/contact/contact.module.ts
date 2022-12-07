@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {ContactComponent} from "src/app/contact/contact/contact.component";
 import {RouterModule, Routes} from "@angular/router";
 import SharedModule from "src/app/shared/shared.module";
+import { HeaderComponent } from '../components/header/header.component';
 
 
 const contactRoutes: Routes = [
@@ -10,7 +11,7 @@ const contactRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ContactComponent, HeaderComponent],
   imports: [
     CommonModule,
     SharedModule,
