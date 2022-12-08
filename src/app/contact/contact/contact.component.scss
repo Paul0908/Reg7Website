@@ -1,66 +1,21 @@
 @import '../../../scss/styles';
 
-.rightCol {
-  @include make-col-ready();
-  background-color: $primary;
-  @include media-breakpoint-up(lg) {
-    @include make-col-offset(6);
-    @include make-col(6);
-  }
-}
-
-#wrapper > * {
-  margin: 0;
-  padding: 0;
+#header{
+  position: absolute;
   height: 100%;
-  @include make-col-ready();
-  @include media-breakpoint-up(lg) {
-    @include make-col(6);
-  }
-  @include make-col(12);
-  &:hover {
-    .content > .paragraph {
-      animation: border .8s ease-in-out forwards, fix-margin .8s ease-in-out forwards;
-    }
-  }
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-
-
-#leftBox {
-  $lboxcolor: $info;
-  background-color: $lboxcolor;
-  &:hover {
-    .content {
-      @include changeColor("lChangeColor", $lboxcolor, rgba($lboxcolor, .9));
-      animation: lChangeColor 0.1s ease-in-out forwards;
-    }
-  }
+#big-box{
+  position: absolute;
+  top: 40%;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 
-#rightBox {
-  $rboxcolor: $success;
-  background-color: $rboxcolor;
-  &:hover {
-    @include changeColor("rChangeColor", $rboxcolor, rgba($rboxcolor,.9));
-    animation:rChangeColor 0.1s ease-in-out forwards;
-  }
-}
-
-.content {
-  @include make-col-ready();
-  @include media-breakpoint-up  (lg){
-    @include make-col(8.6);
-    @include make-col-offset(1.9);
-    height: 100%;
-  }
-  > .paragraph {
-    margin-bottom: 2rem;
-  }
-  > * > span {
-    display: block;
-  }
-}
 
 @keyframes border {
   10% {

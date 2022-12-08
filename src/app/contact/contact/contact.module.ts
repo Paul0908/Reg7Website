@@ -4,6 +4,7 @@ import {ContactComponent} from "src/app/contact/contact/contact.component";
 import {RouterModule, Routes} from "@angular/router";
 import SharedModule from "src/app/shared/shared.module";
 import { HeaderComponent } from '../components/header/header.component';
+import {BigBoxComponent} from "../components/big-box/big-box.component";
 
 
 const contactRoutes: Routes = [
@@ -11,7 +12,7 @@ const contactRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ContactComponent, HeaderComponent],
+  declarations: [ContactComponent, HeaderComponent, BigBoxComponent],
   imports: [
     CommonModule,
     SharedModule,
